@@ -1,8 +1,8 @@
 {
-  "name": "gatsby-starter-netlify-cms",
-  "description": "Example Gatsby, and Netlify CMS project",
+  "name": "horizon-cycling",
+  "description": "The best damn bike shop in the midwest.",
   "version": "1.1.3",
-  "author": "Austin Green",
+  "author": "@midcoast_io",
   "dependencies": {
     "babel-plugin-styled-components": "^1.10.7",
     "gatsby": "^2.13.31",
