@@ -1,7 +1,8 @@
 module.exports = {
   siteMetadata: {
     title: "Horizon Cycling",
-    description: "The best damn bike shop in the midwest"
+    description:
+      "The best damn bike shop in the midwest. Trek, Bonrtager, Shimano, Cannondale, Santa Cruz."
   },
   plugins: [
     "gatsby-plugin-react-helmet",
