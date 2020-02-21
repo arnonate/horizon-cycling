@@ -1,16 +1,8 @@
 ---
 templateKey: index-page
-title: The Best Damn Bike Shop in the Midwest
+title: 'Horizon Cycling St Joseph, MO'
 image: /img/checkpoint.jpg
-heading: Great coffee with a conscience
-subheading: Support sustainable farming while enjoying a cup
-mainpitch:
-  title: Why Kaldi
-  description: >
-    Kaldi is the coffee store for everyone who believes that great coffee
-    shouldn't just taste good, it should do good too. We source all of our beans
-    directly from small scale sustainable farmers and make sure part of the
-    profits are reinvested in their communities.
+heading: The Best Damn Bike Shop in the Midwest
 description: >-
   Kaldi is the ultimate spot for coffee lovers who want to learn about their
   java’s origin and support the farmers that grew it. We take coffee production,
@@ -51,6 +43,20 @@ intro:
     java’s origin and support the farmers that grew it. We take coffee
     production, roasting and brewing seriously and we’re glad to pass that
     knowledge to anyone. This is an edit via identity...
+  events:
+    - date: 2020-02-29T17:00:16.634Z
+      link: 'https://www.facebook.com/events/577084373022424/'
+      title: 'Gravel 101 with Brent: Informational/Meet and Greet'
+      image: /img/event-gravel.jpg
+      description: >-
+        We are excited to announce that we will be starting a Gravel Riding 101
+        Clinic this spring. The clinic will consist of monthly no-drop rides led
+        by our very own Brent Petersen that start short and increase in distance
+        each month. The end goal is to complete a non-supported 100k (62ish
+        miles) by the end of the season (and receive a SWEET certificate for
+        doing so). For our first meeting, we will be discussing the goals of the
+        clinic and what all riders hope to gain by participating. Whether you’re
+        a seasoned rider, or new to the sport, this clinic is FOR YOU!
 main:
   heading: Great coffee with no compromises
   description: >
