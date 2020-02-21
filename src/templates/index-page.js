@@ -38,10 +38,7 @@ export const IndexPageTemplate = ({
           backgroundPosition: "center"
         }}
       >
-        <h1>
-          <span>Horizon Cycling St Joseph, MO</span>
-          {title}
-        </h1>
+        <h1>{title}</h1>
       </div>
       <h1>{mainpitch.title}</h1>
       <h3>{mainpitch.description}</h3>
