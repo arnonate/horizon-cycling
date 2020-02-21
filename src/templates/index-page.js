@@ -18,14 +18,12 @@ export const IndexPageTemplate = ({
   image,
   title,
   heading,
-  subheading,
-  mainpitch,
   description,
   intro
 }) => (
   <Main>
     <h1>{title}</h1>
-    <h3>{subheading}</h3>
+    {/* <h3>{subheading}</h3> */}
     <section>
       <div
         style={{
@@ -40,32 +38,34 @@ export const IndexPageTemplate = ({
       >
         <h1>{title}</h1>
       </div>
-      <h1>{mainpitch.title}</h1>
-      <h3>{mainpitch.description}</h3>
+
       <h3>{heading}</h3>
       <p>{description}</p>
 
-      <Events gridItems={intro.blurbs} />
+      <Events gridItems={intro.events} />
 
-      <Link to="/products">See all products</Link>
+      <Link to="/products">Find more on Facebook!</Link>
 
       <h3>Latest stories</h3>
 
       <BlogRoll />
+
       <Link to="/blog">Read more</Link>
     </section>
   </Main>
 );
 
 IndexPageTemplate.propTypes = {
-  image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   title: PropTypes.string,
+  image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   heading: PropTypes.string,
-  subheading: PropTypes.string,
-  mainpitch: PropTypes.object,
   description: PropTypes.string,
   intro: PropTypes.shape({
-    blurbs: PropTypes.array
+    image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+    address: PropTypes.string,
+    phone: PropTypes.string,
+    hours: PropTypes.string,
+    events: PropTypes.array
   })
 };
 
@@ -110,25 +110,28 @@ export const pageQuery = graphql`
           }
         }
         heading
-        subheading
-        mainpitch {
-          title
-          description
-        }
         description
         intro {
-          blurbs {
+          image {
+            childImageSharp {
+              fluid(maxWidth: 240, quality: 80) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+          address
+          phone
+          hours
+          events {
             image {
               childImageSharp {
-                fluid(maxWidth: 240, quality: 64) {
+                fluid(maxWidth: 240, quality: 80) {
                   ...GatsbyImageSharpFluid
                 }
               }
             }
-            text
+            title
           }
-          heading
-          description
         }
       }
     }
