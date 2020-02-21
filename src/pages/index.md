@@ -1,8 +1,8 @@
 ---
 templateKey: index-page
-title: The Best Damn Bike Shop in the Midwest
+title: 'Horizon Cycling St Joseph, MO'
 image: /img/checkpoint.jpg
-heading: Great coffee with a conscience
+heading: The Best Damn Bike Shop in the Midwest
 subheading: Support sustainable farming while enjoying a cup
 mainpitch:
   title: Why Kaldi
