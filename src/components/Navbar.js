@@ -1,10 +1,47 @@
 import React from "react";
 import { Link } from "gatsby";
 import logo from "../img/logo.svg";
+import facebook from "../img/social/facebook.svg";
+import instagram from "../img/social/instagram.svg";
 import styled from "styled-components";
+import { Tokens } from "../tokens";
+
+const Nav = styled.nav`
+  max-width: 1200px;
+  margin: auto;
+  padding: ${Tokens.rhythm} ${Tokens.gutter};
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`;
 
 const Logo = styled.img`
   width: 300px;
+`;
+
+const Menu = styled.div`
+  display: flex;
+
+  & > * {
+    padding: calc(${Tokens.gutter} / 4) calc(${Tokens.gutter} / 2);
+
+    &.active {
+      border: 3px solid;
+    }
+  }
+
+  img {
+    width: ${Tokens.font.size.base};
+    height: ${Tokens.font.size.base};
+  }
+`;
+
+const Social = styled.div`
+  display: flex;
+
+  & > * + * {
+    margin-left: calc(${Tokens.gutter} / 2);
+  }
 `;
 
 const Navbar = class extends React.Component {
@@ -35,48 +72,58 @@ const Navbar = class extends React.Component {
 
   render() {
     return (
-      <nav role="navigation" aria-label="main-navigation">
-        <div className="container">
-          <div className="navbar-brand">
-            <Link to="/" className="navbar-item" title="Logo">
-              <Logo src={logo} alt="Horizon Cycling in St Joseph, MO" />
-            </Link>
+      <Nav role="navigation" aria-label="main-navigation">
+        <Link to="/" title="Logo">
+          <Logo src={logo} alt="Horizon Cycling in St Joseph, MO" />
+        </Link>
 
-            {/* eslint-disable-next-line */}
-            <div
-              className={`navbar-burger burger ${this.state.navBarActiveClass}`}
-              data-target="navMenu"
-              onClick={() => this.toggleHamburger()}
-            >
-              <span />
-              <span />
-              <span />
-            </div>
-          </div>
-          <div
-            id="navMenu"
-            className={`navbar-menu ${this.state.navBarActiveClass}`}
+        {/* eslint-disable-next-line */}
+        {/* <div
+            className={`navbar-burger burger ${this.state.navBarActiveClass}`}
+            data-target="navMenu"
+            onClick={() => this.toggleHamburger()}
           >
-            <div className="navbar-start has-text-centered">
-              <Link className="navbar-item" to="/about">
-                About
-              </Link>
-              <Link className="navbar-item" to="/products">
-                Products
-              </Link>
-              <Link className="navbar-item" to="/blog">
-                Blog
-              </Link>
-              <Link className="navbar-item" to="/contact">
-                Contact
-              </Link>
-              <Link className="navbar-item" to="/contact/examples">
-                Form Examples
-              </Link>
-            </div>
-          </div>
-        </div>
-      </nav>
+            <span />
+            <span />
+            <span />
+          </div> */}
+
+        <Menu id="navMenu">
+          <Link to="/" activeClassName="active">
+            Home
+          </Link>
+          <Link to="/products" activeClassName="active">
+            Service
+          </Link>
+          <Link to="/blog" activeClassName="active">
+            Events
+          </Link>
+          <Link to="/contact" activeClassName="active">
+            Bikes
+          </Link>
+          <Link to="/contact/examples" activeClassName="active">
+            Teams
+          </Link>
+          <Social>
+            <a
+              title="facebook"
+              href="https://www.facebook.com/horizon.cycling/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src={facebook} alt="Horizon Cycling on Facebook" />
+            </a>
+            <a
+              title="instagram"
+              href="https://www.instagram.com/horizoncycling/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src={instagram} alt="Horizon Cycling on Instagram" />
+            </a>
+          </Social>
+        </Menu>
+      </Nav>
     );
   }
 };

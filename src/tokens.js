@@ -29,5 +29,7 @@ export const Tokens = {
       normal: "300",
       bold: "700"
     }
-  }
+  },
+  gutter: `${rhythm}px`,
+  rhythm: `${rhythm}px`
 };
