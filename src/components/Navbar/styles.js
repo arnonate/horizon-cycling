@@ -21,9 +21,14 @@ export const Menu = styled.div`
   & > * {
     font-size: ${Tokens.font.size.sm};
     padding: 0 ${Tokens.gutter};
+
     &.active {
       border: 3px solid;
     }
+  }
+
+  a {
+    text-decoration: none;
   }
 `;
 

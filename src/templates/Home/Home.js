@@ -1,18 +1,12 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Link, graphql } from "gatsby";
-import styled from "styled-components";
-import { Tokens } from "../tokens";
 
-import Layout from "../components/Layout";
-import Events from "../components/Events";
-import BlogRoll from "../components/BlogRoll";
+import Layout from "../../components/Layout";
+import Events from "../../components/Events";
+import BlogRoll from "../../components/BlogRoll";
 
-const Main = styled.main`
-  width: ${Tokens.wrap.wide};
-  margin: auto;
-  padding: ${Tokens.gutter};
-`;
+import { Main, Wrap, SEOTitle, Hill, Hero, Section, Shout } from "./styles";
 
 export const IndexPageTemplate = ({
   image,
@@ -22,36 +16,42 @@ export const IndexPageTemplate = ({
   intro
 }) => (
   <Main>
-    <h1>{title}</h1>
-    {/* <h3>{subheading}</h3> */}
-    <section>
-      <div
-        style={{
-          backgroundImage: `url(${
-            !!image.childImageSharp ? image.childImageSharp.fluid.src : image
-          })`,
-          width: "100%",
-          height: "400px",
-          backgroundSize: "cover",
-          backgroundPosition: "center"
-        }}
-      >
-        <h1>{title}</h1>
-      </div>
+    <SEOTitle>{title}</SEOTitle>
 
-      <h3>{heading}</h3>
-      <p>{description}</p>
+    <Section>
+      <Hill />
 
-      <Events gridItems={intro.events} />
+      <Wrap>
+        <Hero
+          style={{
+            backgroundImage: `url(${
+              !!image.childImageSharp ? image.childImageSharp.fluid.src : image
+            })`
+          }}
+        >
+          <Shout>{heading}</Shout>
+        </Hero>
+      </Wrap>
+    </Section>
 
-      <Link to="/products">Find more on Facebook!</Link>
+    <Section color="gray">
+      <Wrap narrow>
+        <p>{description}</p>
+      </Wrap>
+    </Section>
 
-      <h3>Latest stories</h3>
+    <Section>
+      <Wrap>
+        <h3>Latest stories</h3>
 
-      <BlogRoll />
+        <Events gridItems={intro.events} />
+        <Link to="/products">Find more on Facebook!</Link>
 
-      <Link to="/blog">Read more</Link>
-    </section>
+        <BlogRoll />
+
+        <Link to="/blog">Read more</Link>
+      </Wrap>
+    </Section>
   </Main>
 );
 
@@ -99,7 +99,7 @@ export default IndexPage;
 
 export const pageQuery = graphql`
   query IndexPageTemplate {
-    markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
+    markdownRemark(frontmatter: { templateKey: { eq: "Home" } }) {
       frontmatter {
         title
         image {

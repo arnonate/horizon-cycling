@@ -1,6 +1,6 @@
 ---
-templateKey: index-page
-title: 'Horizon Cycling St Joseph, MO'
+templateKey: Home
+title: "Horizon Cycling St Joseph, MO"
 image: /img/checkpoint.jpg
 heading: The Best Damn Bike Shop in the Midwest
 description: >-
@@ -11,11 +11,11 @@ description: >-
   esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
   non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 intro:
-  address: '3607 South Belt Highway Saint Joseph, MO 64503'
+  address: "3607 South Belt Highway Saint Joseph, MO 64503"
   events:
     - date: 2020-02-29T17:00:16.634Z
-      link: 'https://www.facebook.com/events/577084373022424/'
-      title: 'Gravel 101 with Brent: Informational/Meet and Greet'
+      link: "https://www.facebook.com/events/577084373022424/"
+      title: "Gravel 101 with Brent: Informational/Meet and Greet"
       image: /img/event-gravel.jpg
       description: >-
         We are excited to announce that we will be starting a Gravel Riding 101
@@ -32,4 +32,3 @@ intro:
   image: /img/brent.jpg
   phone: 816.364.2453
 ---
-

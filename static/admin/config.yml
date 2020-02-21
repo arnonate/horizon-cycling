@@ -22,7 +22,7 @@ collections:
           label: "Template Key",
           name: "templateKey",
           widget: "hidden",
-          default: "blog-post",
+          default: "Post",
         }
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
@@ -36,14 +36,14 @@ collections:
     label: "Pages"
     files:
       - file: "src/pages/index.md"
-        label: "Landing Page"
+        label: "Home Page"
         name: "index"
         fields:
           - {
               label: "Template Key",
               name: "templateKey",
               widget: "hidden",
-              default: "index-page",
+              default: "Home",
             }
           - { label: Title, name: title, widget: string }
           - { label: Image, name: image, widget: image }
@@ -82,7 +82,7 @@ collections:
               label: "Template Key",
               name: "templateKey",
               widget: "hidden",
-              default: "about-page",
+              default: "About",
             }
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Body", name: "body", widget: "markdown" }
@@ -94,7 +94,7 @@ collections:
               label: "Template Key",
               name: "templateKey",
               widget: "hidden",
-              default: "product-page",
+              default: "Products",
             }
           - { label: Title, name: title, widget: string }
           - { label: Image, name: image, widget: image }

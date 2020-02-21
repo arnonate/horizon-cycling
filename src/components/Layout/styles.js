@@ -2,9 +2,10 @@ import styled from "styled-components";
 import { Tokens } from "../../tokens";
 
 export const Wrapper = styled.div`
-  @import url(${Tokens.font.family.src});
+  @import url(${Tokens.font.family.inter.src});
+  @import url(${Tokens.font.family.droid.src});
 
-  font-family: ${Tokens.font.family.body};
+  font-family: ${Tokens.font.family.inter.body};
   font-size: ${Tokens.font.size.base};
   line-height: ${Tokens.font.lineHeight.base};
   color: ${Tokens.color.blue};
@@ -15,7 +16,6 @@ export const Wrapper = styled.div`
 
   a {
     color: ${Tokens.color.blue};
-    text-decoration: none;
     transition: opacity 200ms linear;
 
     &:hover {
@@ -25,6 +25,6 @@ export const Wrapper = styled.div`
   }
 
   @supports (font-variation-settings: normal) {
-    font-family: ${Tokens.font.family.var};
+    font-family: ${Tokens.font.family.inter.var};
   }
 `;

@@ -10,15 +10,21 @@ export const Tokens = {
   },
   font: {
     family: {
-      src: "https://rsms.me/inter/inter.css",
-      body: '"Inter", sans-serif',
-      var: '"Inter var", sans-serif'
+      inter: {
+        src: "https://rsms.me/inter/inter.css",
+        body: '"Inter", sans-serif',
+        var: '"Inter var", sans-serif'
+      },
+      droid: {
+        src: "https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap",
+        slab: '"Roboto Slab", sans-serif'
+      }
     },
     size: {
       base: `${size}px`,
       sm: `${size * 0.75}px`,
-      lg: `${size * 1.25}px`,
-      xl: `${size * 1.5}px`
+      lg: `${size * 1.5}px`,
+      xl: `${size * 2}px`
     },
     lineHeight: {
       base: `${rhythm}px`,
