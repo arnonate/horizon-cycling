@@ -1,39 +1,10 @@
 import React from "react";
 import { Helmet } from "react-helmet";
-import Footer from "../components/Footer";
-import Navbar from "../components/Navbar";
-import useSiteMetadata from "./SiteMetadata";
+import Footer from "../Footer";
+import Navbar from "../Navbar";
+import useSiteMetadata from "../SiteMetadata";
 import { withPrefix } from "gatsby";
-import styled from "styled-components";
-import { Tokens } from "../tokens";
-
-const Wrapper = styled.div`
-  @import url(${Tokens.font.family.src});
-
-  font-family: ${Tokens.font.family.body};
-  font-size: ${Tokens.font.size.base};
-  line-height: ${Tokens.font.lineHeight.base};
-  color: ${Tokens.color.blue};
-
-  * {
-    box-sizing: border-box;
-  }
-
-  a {
-    color: ${Tokens.color.blue};
-    text-decoration: none;
-    transition: opacity 200ms linear;
-
-    &:hover {
-      opacity: 0.5;
-      color: ${Tokens.color.blue};
-    }
-  }
-
-  @supports (font-variation-settings: normal) {
-    font-family: ${Tokens.font.family.var};
-  }
-`;
+import { Wrapper } from "./styles";
 
 const TemplateWrapper = ({ children }) => {
   const { title, description } = useSiteMetadata();

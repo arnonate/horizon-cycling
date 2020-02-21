@@ -1,48 +1,9 @@
 import React from "react";
 import { Link } from "gatsby";
-import logo from "../img/logo.svg";
-import facebook from "../img/social/facebook.svg";
-import instagram from "../img/social/instagram.svg";
-import styled from "styled-components";
-import { Tokens } from "../tokens";
-
-const Nav = styled.nav`
-  max-width: 1200px;
-  margin: auto;
-  padding: ${Tokens.rhythm} ${Tokens.gutter};
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-`;
-
-const Logo = styled.img`
-  width: 300px;
-`;
-
-const Menu = styled.div`
-  display: flex;
-
-  & > * {
-    padding: calc(${Tokens.gutter} / 4) calc(${Tokens.gutter} / 2);
-
-    &.active {
-      border: 3px solid;
-    }
-  }
-
-  img {
-    width: ${Tokens.font.size.base};
-    height: ${Tokens.font.size.base};
-  }
-`;
-
-const Social = styled.div`
-  display: flex;
-
-  & > * + * {
-    margin-left: calc(${Tokens.gutter} / 2);
-  }
-`;
+import logo from "../../img/logo.svg";
+import facebook from "../../img/social/facebook.svg";
+import instagram from "../../img/social/instagram.svg";
+import { Nav, Logo, Menu, Social } from "./styles";
 
 const Navbar = class extends React.Component {
   constructor(props) {
