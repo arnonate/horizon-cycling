@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { Tokens } from "../../tokens";
 
 export const Nav = styled.nav`
-  max-width: 1200px;
+  max-width: ${Tokens.wrap.wide};
   margin: auto;
   padding: ${Tokens.rhythm} ${Tokens.gutter};
   display: flex;
@@ -30,6 +30,7 @@ export const Menu = styled.div`
 export const Social = styled.div`
   display: flex;
   align-items: center;
+  padding-right: 0;
 
   & > * {
     line-height: ${Tokens.font.size.sm};

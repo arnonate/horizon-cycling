@@ -31,5 +31,9 @@ export const Tokens = {
     }
   },
   gutter: `${rhythm / 2}px`,
-  rhythm: `${rhythm}px`
+  rhythm: `${rhythm}px`,
+  wrap: {
+    narrow: "800px",
+    wide: "1200px"
+  }
 };
