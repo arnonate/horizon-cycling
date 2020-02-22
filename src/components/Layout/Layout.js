@@ -4,12 +4,49 @@ import Footer from "../Footer";
 import Navbar from "../Navbar";
 import useSiteMetadata from "../SiteMetadata";
 import { withPrefix } from "gatsby";
-import { Wrapper } from "./styles";
+import { createGlobalStyle } from "styled-components";
+import { Tokens } from "../../tokens";
+
+const GlobalStyle = createGlobalStyle`
+  @import url(${Tokens.font.family.inter.src});
+  @import url(${Tokens.font.family.droid.src});
+
+  body {
+    font-family: ${Tokens.font.family.inter.body};
+    font-size: ${Tokens.font.size.base};
+    line-height: ${Tokens.font.lineHeight.base};
+    color: ${Tokens.color.blue};
+    margin: 0;
+
+    @supports (font-variation-settings: normal) {
+      font-family: ${Tokens.font.family.inter.var};
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    p {
+      padding-bottom: ${Tokens.rhythm};
+    }
+
+    a {
+      color: ${Tokens.color.blue};
+      transition: opacity 200ms linear;
+
+      &:hover {
+        opacity: 0.5;
+        color: ${Tokens.color.blue};
+      }
+    }
+  }
+`;
 
 const TemplateWrapper = ({ children }) => {
   const { title, description } = useSiteMetadata();
   return (
-    <Wrapper>
+    <>
+      <GlobalStyle />
       <Helmet>
         <html lang="en" />
         <title>{title}</title>
@@ -51,7 +88,7 @@ const TemplateWrapper = ({ children }) => {
       <Navbar />
       <div>{children}</div>
       <Footer />
-    </Wrapper>
+    </>
   );
 };
 

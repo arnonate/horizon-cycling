@@ -4,7 +4,8 @@ const rhythm = size * 1.5;
 export const Tokens = {
   color: {
     blue: "#252B34",
-    gray: "#F0F0F0",
+    mute: "#F0F0F0",
+    gray: "#E0E0E0",
     gold: "#9C9787",
     white: "#FFFFFF"
   },

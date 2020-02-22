@@ -5,7 +5,6 @@ import { Link, graphql } from "gatsby";
 import Layout from "../../components/Layout";
 import Events from "../../components/Events";
 import BlogRoll from "../../components/BlogRoll";
-
 import { Main, Wrap, SEOTitle, Hill, Hero, Section, Shout } from "./styles";
 
 export const IndexPageTemplate = ({
@@ -34,7 +33,7 @@ export const IndexPageTemplate = ({
       </Wrap>
     </Section>
 
-    <Section color="gray">
+    <Section color="mute">
       <Wrap narrow>
         <p>{description}</p>
       </Wrap>
@@ -45,8 +44,18 @@ export const IndexPageTemplate = ({
         <h3>Latest stories</h3>
 
         <Events gridItems={intro.events} />
-        <Link to="/products">Find more on Facebook!</Link>
+        <Link
+          to="https://www.facebook.com/pg/horizon.cycling/events/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Find more on Facebook!
+        </Link>
+      </Wrap>
+    </Section>
 
+    <Section>
+      <Wrap>
         <BlogRoll />
 
         <Link to="/blog">Read more</Link>

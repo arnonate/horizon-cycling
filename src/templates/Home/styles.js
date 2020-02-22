@@ -52,7 +52,7 @@ export const Hill = styled.div`
   top: 45%;
   left: 50%;
   width: 200vw;
-  height: 50vh;
-  background-color: ${Tokens.color.gray};
+  height: 450px;
+  background-color: ${Tokens.color.mute};
   transform: rotate(-8deg) translate(-50%, -50%);
 `;
