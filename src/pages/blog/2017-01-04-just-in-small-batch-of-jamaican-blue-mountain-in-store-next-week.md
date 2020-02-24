@@ -1,6 +1,6 @@
 ---
 templateKey: Post
-title: Jack's 2020 Fuel EX
+title: Jack's Fuel EX
 date: 2020-02-24T15:04:10.000Z
 description: >-
   Fuel EX is a versatile full suspension mountain bike that’s fast on
