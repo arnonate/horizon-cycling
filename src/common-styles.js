@@ -71,7 +71,7 @@ export const Logo = styled.img`
 export const Social = styled.div`
   display: flex;
   align-items: center;
-  padding: 0;
+  padding-right: 0;
 
   & > * {
     line-height: ${Tokens.font.size.sm};
