@@ -11,7 +11,7 @@ description: >-
   esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
   non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 intro:
-  address: '3607 South Belt Highway Saint Joseph, MO 64503'
+  address: '3607 South Belt Highway\nSaint Joseph, MO 64503'
   events:
     - date: 2020-02-29T17:00:16.634Z
       link: 'https://www.facebook.com/events/577084373022424/'
@@ -23,7 +23,7 @@ intro:
         by our very own Brent Petersen that start short and increase in distance
         each month.
   hours: |-
-    Open Monday - Friday 10 - 5
+    Open Monday - Friday 10 - 5\n
     Open Saturday 10 - 2
   image: /img/brent.jpg
   phone: 816.364.2453
