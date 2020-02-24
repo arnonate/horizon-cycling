@@ -40,14 +40,12 @@ export const Intro = styled.div`
 
 export const Info = styled.div`
   h4 {
-    width: 50%;
     margin: 0 0 calc(${Tokens.rhythm} / 4);
     line-height: ${Tokens.rhythm};
     font-size: ${Tokens.font.size.base};
   }
 
   p {
-    width: 36%;
     padding-bottom: ${Tokens.rhythm};
   }
 `;
