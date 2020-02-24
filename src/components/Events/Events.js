@@ -1,7 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 import moment from "moment";
-import { Event, EventImage, Date, EventHeading, ButtonLink } from "./styles";
+import { ButtonLink } from "../../common-styles";
+import { EventImage, Date, EventHeading } from "./styles";
 
 const FeatureGrid = ({ gridItems }) => (
   <>
@@ -28,9 +29,8 @@ const FeatureGrid = ({ gridItems }) => (
           target="_blank"
           rel="noopener noreferrer"
         >
-          <small>
-            View Event
-            {/* <svg
+          View Event
+          {/* <svg
               width="24"
               height="24"
               viewBox="0 0 24 24"
@@ -42,7 +42,6 @@ const FeatureGrid = ({ gridItems }) => (
                 fill="white"
               />
             </svg> */}
-          </small>
         </ButtonLink>
       </div>
     ))}

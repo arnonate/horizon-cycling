@@ -7,17 +7,21 @@ import Events from "../../components/Events";
 import BlogRoll from "../../components/BlogRoll";
 import {
   Main,
+  Section,
   Wrap,
   SEOTitle,
+  BorderedHeading,
+  ButtonLink
+} from "../../common-styles";
+import {
   Hill,
   Hero,
-  Section,
   Shout,
   Intro,
-  BorderedHeading,
   Info,
   InfoImage,
-  Riding
+  Riding,
+  RidingHeading
 } from "./styles";
 
 export const IndexPageTemplate = ({
@@ -101,12 +105,14 @@ export const IndexPageTemplate = ({
       <Wrap>
         <Riding>
           <div>
-            <h2>What We're Riding</h2>
+            <RidingHeading>What We're Riding</RidingHeading>
             <p>
-              We don’t just work on bikes, we enjoy riding them as well! Check
-              out the bikes we are digging right now..
+              <small>
+                We don’t just work on bikes, we enjoy riding them as well! Check
+                out the bikes we are digging right now..
+              </small>
             </p>
-            <Link to="/blog">Read more</Link>
+            <ButtonLink href="/blog">View Them All</ButtonLink>
           </div>
           <div>
             <BlogRoll />

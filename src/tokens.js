@@ -37,7 +37,7 @@ export const Tokens = {
       bold: "700"
     }
   },
-  gutter: `${rhythm / 2}px`,
+  gutter: `${rhythm}px`,
   rhythm: `${rhythm}px`,
   wrap: {
     narrow: "800px",
@@ -45,5 +45,10 @@ export const Tokens = {
   },
   border: {
     size: `3px`
+  },
+  opacity: `0.5`,
+  transition: {
+    timing: `200ms`,
+    type: `linear`
   }
 };

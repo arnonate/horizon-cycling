@@ -29,13 +29,15 @@ const GlobalStyle = createGlobalStyle`
 
     a {
       color: ${Tokens.color.blue};
-      transition: opacity 200ms linear;
+      transition: opacity ${Tokens.transition.timing} ${Tokens.transition.type};
 
       &:hover {
-        opacity: 0.5;
+        opacity: ${Tokens.opacity};
         color: ${Tokens.color.blue};
       }
     }
+
+    h1, h2, h3, h4 { margin: 0 }
   }
 `;
 

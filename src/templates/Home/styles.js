@@ -1,35 +1,6 @@
 import styled from "styled-components";
 import { Tokens } from "../../tokens";
 
-export const Main = styled.main``;
-
-export const Wrap = styled.div`
-  max-width: ${props =>
-    props.narrow ? `${Tokens.wrap.narrow}` : `${Tokens.wrap.wide}`};
-  margin: auto;
-`;
-
-export const SEOTitle = styled.h1`
-  visibility: hidden;
-  font-size: 0;
-  margin: 0;
-  padding: 0;
-  line-height: 0;
-`;
-
-export const Section = styled.section`
-  position: relative;
-  background-color: ${props =>
-    props.color ? `${Tokens.color[props.color]}` : `${Tokens.color.white}`};
-  color: ${props =>
-    props.color && props.color === "blue"
-      ? `${Tokens.color.white}`
-      : `${Tokens.color.blue}`};
-  padding: ${Tokens.rhythm} 0;
-  padding-bottom: ${props =>
-    props.paddingBottom ? `calc(${Tokens.rhythm} * 2)` : `${Tokens.rhythm}`};
-`;
-
 export const Hero = styled.div`
   width: 100%;
   height: 500px;
@@ -40,7 +11,7 @@ export const Hero = styled.div`
 
 export const Shout = styled.h2`
   background-color: ${Tokens.color.blue};
-  padding: calc(${Tokens.gutter} * 2);
+  padding: ${Tokens.gutter} calc(${Tokens.gutter} * 2);
   color: ${Tokens.color.white};
   font-family: ${Tokens.font.family.droid.slab};
   font-size: ${Tokens.font.size.xl};
@@ -73,15 +44,6 @@ export const Intro = styled.div`
   }
 `;
 
-export const BorderedHeading = styled.h3`
-  display: inline-block;
-  padding: calc(${Tokens.rhythm} / 8) ${Tokens.gutter};
-  margin: 0 0 ${Tokens.rhythm};
-  font-family: ${Tokens.font.family.droid.slab};
-  font-size: ${Tokens.font.size.base};
-  border: ${Tokens.border.size} solid;
-`;
-
 export const Info = styled.div`
   h4 {
     width: 50%;
@@ -104,4 +66,26 @@ export const InfoImage = styled.div`
   margin-bottom: ${Tokens.rhythm};
 `;
 
-export const Riding = styled.div``;
+export const Riding = styled.div`
+  padding-top: calc(${Tokens.rhythm} * 2);
+  display: flex;
+  justify-content: space-between;
+
+  & > * {
+    width: calc(74% - ${Tokens.gutter});
+  }
+
+  & > *:first-child {
+    width: calc(26% - ${Tokens.gutter});
+  }
+`;
+
+export const RidingHeading = styled.h2`
+  padding: ${Tokens.rhythm} ${Tokens.gutter};
+  margin: 0 0 ${Tokens.rhythm};
+  font-family: ${Tokens.font.family.droid.slab};
+  font-size: ${Tokens.font.size.xl};
+  line-height: calc(${Tokens.rhythm} * 2);
+  text-transform: uppercase;
+  border: calc(${Tokens.border.size} * 2) solid;
+`;
