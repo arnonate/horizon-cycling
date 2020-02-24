@@ -21,6 +21,10 @@ export const Section = styled.section`
   position: relative;
   background-color: ${props =>
     props.color ? `${Tokens.color[props.color]}` : `${Tokens.color.white}`};
+  color: ${props =>
+    props.color && props.color === "blue"
+      ? `${Tokens.color.white}`
+      : `${Tokens.color.blue}`};
   padding: ${Tokens.rhythm} 0;
   padding-bottom: ${props =>
     props.paddingBottom ? `calc(${Tokens.rhythm} * 2)` : `${Tokens.rhythm}`};
@@ -87,7 +91,8 @@ export const Info = styled.div`
   }
 
   p {
-    width: 40%;
+    width: 36%;
+    padding-bottom: ${Tokens.rhythm};
   }
 `;
 
@@ -98,3 +103,5 @@ export const InfoImage = styled.div`
   height: calc(${Tokens.rhythm} * 10);
   margin-bottom: ${Tokens.rhythm};
 `;
+
+export const Riding = styled.div``;

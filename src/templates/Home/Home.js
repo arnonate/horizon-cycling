@@ -16,7 +16,8 @@ import {
   Intro,
   BorderedHeading,
   Info,
-  InfoImage
+  InfoImage,
+  Riding
 } from "./styles";
 
 export const IndexPageTemplate = ({
@@ -51,11 +52,11 @@ export const IndexPageTemplate = ({
       </Wrap>
     </Section>
 
-    <Section>
+    <Section paddingBottom>
       <Wrap>
         <Intro>
           <Info>
-            <BorderedHeading>Info</BorderedHeading>
+            <BorderedHeading>Shop Info</BorderedHeading>
             <InfoImage
               style={{
                 backgroundImage: `url(${
@@ -96,11 +97,21 @@ export const IndexPageTemplate = ({
       </Wrap>
     </Section>
 
-    <Section>
+    <Section color="blue" paddingBottom>
       <Wrap>
-        <BlogRoll />
-
-        <Link to="/blog">Read more</Link>
+        <Riding>
+          <div>
+            <h2>What We're Riding</h2>
+            <p>
+              We don’t just work on bikes, we enjoy riding them as well! Check
+              out the bikes we are digging right now..
+            </p>
+            <Link to="/blog">Read more</Link>
+          </div>
+          <div>
+            <BlogRoll />
+          </div>
+        </Riding>
       </Wrap>
     </Section>
   </Main>

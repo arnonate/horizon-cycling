@@ -18,7 +18,7 @@ export const Date = styled.div`
 `;
 
 export const EventHeading = styled.h4`
-  line-height: ${Tokens.font.lineHeight.lg};
+  line-height: ${Tokens.font.lineHeight.base};
   margin: 0;
 `;
 
