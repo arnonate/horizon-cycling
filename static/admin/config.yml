@@ -57,8 +57,22 @@ collections:
                 [
                   { label: Image, name: image, widget: image },
                   { label: Address, name: address, widget: string },
+                  {
+                    label: "Address (Continued)",
+                    name: address_2,
+                    widget: string,
+                  },
                   { label: Phone, name: phone, widget: string },
-                  { label: Hours, name: hours, widget: text },
+                  {
+                    label: "Weekday Hours",
+                    name: weekdayHours,
+                    widget: string,
+                  },
+                  {
+                    label: "Weekend Hours",
+                    name: weekendHours,
+                    widget: string,
+                  },
                   {
                     label: Events,
                     name: events,

@@ -73,10 +73,18 @@ export const IndexPageTemplate = ({
                 alt="Horizon Cycling St Joseph, MO Bike Maintenance"
               ></InfoImage>
               <h4>
-                {intro.address} <a href={`tel:${intro.phone}`}>{intro.phone}</a>
+                {intro.address}
+                <br />
+                {intro.address_2}
+                <br />
+                <a href={`tel:${intro.phone}`}>{intro.phone}</a>
               </h4>
               <p>
-                <small>{intro.hours}</small>
+                <small>
+                  {intro.weekdayHours}
+                  <br />
+                  {intro.weekendHours}
+                </small>
               </p>
               <a
                 href="https://goo.gl/maps/oA7Xq5ykBLVpSFBm7"
@@ -135,8 +143,10 @@ IndexPageTemplate.propTypes = {
   intro: PropTypes.shape({
     image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
     address: PropTypes.string,
+    address_2: PropTypes.string,
     phone: PropTypes.string,
-    hours: PropTypes.string,
+    weekdayHours: PropTypes.string,
+    weekendHours: PropTypes.string,
     events: PropTypes.array
   })
 };
@@ -192,8 +202,10 @@ export const pageQuery = graphql`
             }
           }
           address
+          address_2
           phone
-          hours
+          weekdayHours
+          weekendHours
           events {
             image {
               childImageSharp {
