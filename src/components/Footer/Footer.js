@@ -5,8 +5,8 @@ import { Link } from "gatsby";
 import logo from "../../img/logo_inverse.svg";
 import facebook from "../../img/social/facebook_inverse.svg";
 import instagram from "../../img/social/instagram_inverse.svg";
-import { Wrap, Section, Social, Logo } from "../../common-styles";
-import { FooterMenu } from "./styles";
+import { Wrap, Section, Flex, Social, Logo } from "../../common-styles";
+import { Divider } from "./styles";
 
 const Footer = class extends React.Component {
   render() {
@@ -14,7 +14,8 @@ const Footer = class extends React.Component {
       <footer>
         <Section color="blue">
           <Wrap>
-            <FooterMenu>
+            <Divider />
+            <Flex>
               <Link to="/" title="Logo">
                 <Logo src={logo} alt="Horizon Cycling in St Joseph, MO" />
               </Link>
@@ -36,7 +37,7 @@ const Footer = class extends React.Component {
                   <img src={instagram} alt="Horizon Cycling on Instagram" />
                 </a>
               </Social>
-            </FooterMenu>
+            </Flex>
             <p>
               <small>
                 &copy; {moment().format("YYYY")} Horizon Cycling. All rights
