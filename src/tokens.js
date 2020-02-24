@@ -42,5 +42,8 @@ export const Tokens = {
   wrap: {
     narrow: "800px",
     wide: "1200px"
+  },
+  border: {
+    size: `3px`
   }
 };

@@ -4,7 +4,7 @@ import { Tokens } from "../../tokens";
 export const Nav = styled.nav`
   max-width: ${Tokens.wrap.wide};
   margin: auto;
-  padding: ${Tokens.rhythm} ${Tokens.gutter};
+  padding: ${Tokens.rhythm} ${Tokens.gutter} 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -23,7 +23,7 @@ export const Menu = styled.div`
     padding: 0 ${Tokens.gutter};
 
     &.active {
-      border: 3px solid;
+      border: ${Tokens.border.size} solid;
     }
   }
 

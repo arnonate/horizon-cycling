@@ -5,7 +5,19 @@ import { Link, graphql } from "gatsby";
 import Layout from "../../components/Layout";
 import Events from "../../components/Events";
 import BlogRoll from "../../components/BlogRoll";
-import { Main, Wrap, SEOTitle, Hill, Hero, Section, Shout } from "./styles";
+import {
+  Main,
+  Wrap,
+  SEOTitle,
+  Hill,
+  Hero,
+  Section,
+  Shout,
+  Intro,
+  BorderedHeading,
+  Info,
+  InfoImage
+} from "./styles";
 
 export const IndexPageTemplate = ({
   image,
@@ -33,7 +45,7 @@ export const IndexPageTemplate = ({
       </Wrap>
     </Section>
 
-    <Section color="mute">
+    <Section color="mute" paddingBottom>
       <Wrap narrow>
         <p>{description}</p>
       </Wrap>
@@ -41,16 +53,46 @@ export const IndexPageTemplate = ({
 
     <Section>
       <Wrap>
-        <h3>Latest stories</h3>
+        <Intro>
+          <Info>
+            <BorderedHeading>Info</BorderedHeading>
+            <InfoImage
+              style={{
+                backgroundImage: `url(${
+                  !!intro.image.childImageSharp
+                    ? intro.image.childImageSharp.fluid.src
+                    : intro.image
+                })`
+              }}
+              alt="Horizon Cycling St Joseph, MO Bike Maintenance"
+            ></InfoImage>
+            <h4>
+              {intro.address} <a href={`tel:${intro.phone}`}>{intro.phone}</a>
+            </h4>
+            <p>
+              <small>{intro.hours}</small>
+            </p>
+            <a
+              href="https://goo.gl/maps/oA7Xq5ykBLVpSFBm7"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <small>Get Directions!</small>
+            </a>
+          </Info>
+          <div>
+            <BorderedHeading>Events</BorderedHeading>
 
-        <Events gridItems={intro.events} />
-        <Link
-          to="https://www.facebook.com/pg/horizon.cycling/events/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Find more on Facebook!
-        </Link>
+            <Events gridItems={intro.events} />
+            <Link
+              to="https://www.facebook.com/pg/horizon.cycling/events/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <small>Find more on Facebook!</small>
+            </Link>
+          </div>
+        </Intro>
       </Wrap>
     </Section>
 
@@ -123,7 +165,7 @@ export const pageQuery = graphql`
         intro {
           image {
             childImageSharp {
-              fluid(maxWidth: 240, quality: 80) {
+              fluid(maxWidth: 600, quality: 80) {
                 ...GatsbyImageSharpFluid
               }
             }
@@ -134,12 +176,15 @@ export const pageQuery = graphql`
           events {
             image {
               childImageSharp {
-                fluid(maxWidth: 240, quality: 80) {
+                fluid(maxWidth: 600, quality: 80) {
                   ...GatsbyImageSharpFluid
                 }
               }
             }
             title
+            date
+            link
+            description
           }
         }
       }

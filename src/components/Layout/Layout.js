@@ -22,13 +22,10 @@ const GlobalStyle = createGlobalStyle`
       font-family: ${Tokens.font.family.inter.var};
     }
 
-    * {
-      box-sizing: border-box;
-    }
-
-    p {
-      padding-bottom: ${Tokens.rhythm};
-    }
+    * { box-sizing: border-box; }
+    p { margin: 0; }
+    p + p { text-indent: 1em; }
+    small { font-size: ${Tokens.font.size.sm}; }
 
     a {
       color: ${Tokens.color.blue};
