@@ -16,12 +16,39 @@ export const Section = styled.section`
   padding: ${Tokens.rhythm} 0;
   padding-bottom: ${props =>
     props.paddingBottom ? `calc(${Tokens.rhythm} * 2)` : `${Tokens.rhythm}`};
+
+  a {
+    color: ${props =>
+      props.color && props.color === "blue" ? `${Tokens.color.white}` : null};
+
+    &:hover {
+      color: ${props =>
+        props.color && props.color === "blue" ? `${Tokens.color.white}` : null};
+    }
+  }
 `;
 
 export const Wrap = styled.div`
   max-width: ${props =>
     props.narrow ? `${Tokens.wrap.narrow}` : `${Tokens.wrap.wide}`};
   margin: auto;
+  padding: 0 ${Tokens.gutter};
+`;
+
+export const Flex = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: ${props => (props.align ? props.align : `initial`)};
+
+  & > *:first-child {
+    width: ${props =>
+      props.width ? `calc(${props.width[0]}% - ${Tokens.gutter})` : `auto`};
+  }
+
+  & > *:last-child {
+    width: ${props =>
+      props.width ? `calc(${props.width[1]}% - ${Tokens.gutter})` : `auto`};
+  }
 `;
 
 export const Logo = styled.img`

@@ -2,9 +2,9 @@ import React from "react";
 import moment from "moment";
 import { Link } from "gatsby";
 
-import logo from "../../img/logo.svg";
-import facebook from "../../img/social/facebook.svg";
-import instagram from "../../img/social/instagram.svg";
+import logo from "../../img/logo_inverse.svg";
+import facebook from "../../img/social/facebook_inverse.svg";
+import instagram from "../../img/social/instagram_inverse.svg";
 import { Wrap, Section, Social, Logo } from "../../common-styles";
 import { FooterMenu } from "./styles";
 
@@ -12,7 +12,7 @@ const Footer = class extends React.Component {
   render() {
     return (
       <footer>
-        <Section color="gray">
+        <Section color="blue">
           <Wrap>
             <FooterMenu>
               <Link to="/" title="Logo">

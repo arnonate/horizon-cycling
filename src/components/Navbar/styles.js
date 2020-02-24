@@ -3,9 +3,6 @@ import { Tokens } from "../../tokens";
 
 export const Nav = styled.nav`
   padding-top: ${Tokens.rhythm};
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 `;
 
 export const Menu = styled.div`

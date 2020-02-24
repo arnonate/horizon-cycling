@@ -8,6 +8,7 @@ import {
   Main,
   Section,
   Wrap,
+  Flex,
   SEOTitle,
   BorderedHeading,
   ButtonLink
@@ -58,44 +59,46 @@ export const IndexPageTemplate = ({
     <Section paddingBottom>
       <Wrap>
         <Intro>
-          <Info>
-            <BorderedHeading>Shop Info</BorderedHeading>
-            <InfoImage
-              style={{
-                backgroundImage: `url(${
-                  !!intro.image.childImageSharp
-                    ? intro.image.childImageSharp.fluid.src
-                    : intro.image
-                })`
-              }}
-              alt="Horizon Cycling St Joseph, MO Bike Maintenance"
-            ></InfoImage>
-            <h4>
-              {intro.address} <a href={`tel:${intro.phone}`}>{intro.phone}</a>
-            </h4>
-            <p>
-              <small>{intro.hours}</small>
-            </p>
-            <a
-              href="https://goo.gl/maps/oA7Xq5ykBLVpSFBm7"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <small>Get Directions!</small>
-            </a>
-          </Info>
-          <div>
-            <BorderedHeading>Events</BorderedHeading>
+          <Flex width={[50, 50]}>
+            <Info>
+              <BorderedHeading>Shop Info</BorderedHeading>
+              <InfoImage
+                style={{
+                  backgroundImage: `url(${
+                    !!intro.image.childImageSharp
+                      ? intro.image.childImageSharp.fluid.src
+                      : intro.image
+                  })`
+                }}
+                alt="Horizon Cycling St Joseph, MO Bike Maintenance"
+              ></InfoImage>
+              <h4>
+                {intro.address} <a href={`tel:${intro.phone}`}>{intro.phone}</a>
+              </h4>
+              <p>
+                <small>{intro.hours}</small>
+              </p>
+              <a
+                href="https://goo.gl/maps/oA7Xq5ykBLVpSFBm7"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <small>Get Directions!</small>
+              </a>
+            </Info>
+            <div>
+              <BorderedHeading>Events</BorderedHeading>
 
-            <Events gridItems={intro.events} />
-            <a
-              href="https://www.facebook.com/pg/horizon.cycling/events/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <small>Find more on Facebook!</small>
-            </a>
-          </div>
+              <Events gridItems={intro.events} />
+              <a
+                href="https://www.facebook.com/pg/horizon.cycling/events/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <small>Find more on Facebook!</small>
+              </a>
+            </div>
+          </Flex>
         </Intro>
       </Wrap>
     </Section>
@@ -103,19 +106,21 @@ export const IndexPageTemplate = ({
     <Section color="blue" paddingBottom>
       <Wrap>
         <Riding>
-          <div>
-            <RidingHeading>What We're Riding</RidingHeading>
-            <p>
-              <small>
-                We don’t just work on bikes, we enjoy riding them as well! Check
-                out the bikes we are digging right now..
-              </small>
-            </p>
-            <ButtonLink href="/blog">View Them All</ButtonLink>
-          </div>
-          <div>
-            <BlogRoll />
-          </div>
+          <Flex width={[26, 74]}>
+            <div>
+              <RidingHeading>What We're Riding</RidingHeading>
+              <p>
+                <small>
+                  We don’t just work on bikes, we enjoy riding them as well!
+                  Check out the bikes we are digging right now..
+                </small>
+              </p>
+              <ButtonLink href="/blog">View Them All</ButtonLink>
+            </div>
+            <div>
+              <BlogRoll />
+            </div>
+          </Flex>
         </Riding>
       </Wrap>
     </Section>

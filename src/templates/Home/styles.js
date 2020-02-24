@@ -26,22 +26,16 @@ export const Shout = styled.h2`
 export const Hill = styled.div`
   position: absolute;
   content: "";
-  top: 45%;
+  top: 55%;
   left: 50%;
   width: 200vw;
-  height: 450px;
+  height: 600px;
   background-color: ${Tokens.color.mute};
   transform: rotate(-8deg) translate(-50%, -50%);
 `;
 
 export const Intro = styled.div`
-  display: flex;
-  justify-content: space-between;
   padding-top: ${Tokens.rhythm};
-
-  & > * {
-    width: calc(50% - ${Tokens.gutter});
-  }
 `;
 
 export const Info = styled.div`
@@ -68,16 +62,6 @@ export const InfoImage = styled.div`
 
 export const Riding = styled.div`
   padding-top: calc(${Tokens.rhythm} * 2);
-  display: flex;
-  justify-content: space-between;
-
-  & > * {
-    width: calc(74% - ${Tokens.gutter});
-  }
-
-  & > *:first-child {
-    width: calc(26% - ${Tokens.gutter});
-  }
 `;
 
 export const RidingHeading = styled.h2`
