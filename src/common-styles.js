@@ -1,7 +1,9 @@
 import styled from "styled-components";
 import { Tokens } from "./tokens";
 
-export const Main = styled.main``;
+export const Main = styled.main`
+  overflow: hidden;
+`;
 
 export const Section = styled.section`
   position: relative;
@@ -20,6 +22,29 @@ export const Wrap = styled.div`
   max-width: ${props =>
     props.narrow ? `${Tokens.wrap.narrow}` : `${Tokens.wrap.wide}`};
   margin: auto;
+`;
+
+export const Logo = styled.img`
+  width: 300px;
+`;
+
+export const Social = styled.div`
+  display: flex;
+  align-items: center;
+  padding-right: 0;
+
+  & > * {
+    line-height: ${Tokens.font.size.sm};
+  }
+
+  & > * + * {
+    margin-left: calc(${Tokens.gutter} / 2);
+  }
+
+  img {
+    width: ${Tokens.font.size.sm};
+    height: ${Tokens.font.size.sm};
+  }
 `;
 
 export const SEOTitle = styled.h1`

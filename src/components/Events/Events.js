@@ -54,7 +54,7 @@ FeatureGrid.propTypes = {
       image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
       description: PropTypes.string,
       title: PropTypes.string,
-      date: PropTypes.instanceOf(Date),
+      date: PropTypes.string,
       link: PropTypes.string
     })
   )

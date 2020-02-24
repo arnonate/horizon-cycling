@@ -1,7 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Link, graphql } from "gatsby";
-
+import { graphql } from "gatsby";
 import Layout from "../../components/Layout";
 import Events from "../../components/Events";
 import BlogRoll from "../../components/BlogRoll";
@@ -89,13 +88,13 @@ export const IndexPageTemplate = ({
             <BorderedHeading>Events</BorderedHeading>
 
             <Events gridItems={intro.events} />
-            <Link
-              to="https://www.facebook.com/pg/horizon.cycling/events/"
+            <a
+              href="https://www.facebook.com/pg/horizon.cycling/events/"
               target="_blank"
               rel="noopener noreferrer"
             >
               <small>Find more on Facebook!</small>
-            </Link>
+            </a>
           </div>
         </Intro>
       </Wrap>

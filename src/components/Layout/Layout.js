@@ -8,9 +8,6 @@ import { createGlobalStyle } from "styled-components";
 import { Tokens } from "../../tokens";
 
 const GlobalStyle = createGlobalStyle`
-  @import url(${Tokens.font.family.inter.src});
-  @import url(${Tokens.font.family.droid.src});
-
   body {
     font-family: ${Tokens.font.family.inter.body};
     font-size: ${Tokens.font.size.base};
@@ -68,14 +65,14 @@ const TemplateWrapper = ({ children }) => {
           href={`${withPrefix("/")}img/favicon-16x16.png`}
           sizes="16x16"
         />
-
         <link
           rel="mask-icon"
           href={`${withPrefix("/")}img/safari-pinned-tab.svg`}
           color="#ff4400"
         />
+        <link rel="stylesheet" href={Tokens.font.family.inter.src} />
+        <link rel="stylesheet" href={Tokens.font.family.droid.src} />
         <meta name="theme-color" content="#fff" />
-
         <meta property="og:type" content="business.business" />
         <meta property="og:title" content={title} />
         <meta property="og:url" content="/" />

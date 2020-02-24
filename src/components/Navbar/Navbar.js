@@ -3,7 +3,8 @@ import { Link } from "gatsby";
 import logo from "../../img/logo.svg";
 import facebook from "../../img/social/facebook.svg";
 import instagram from "../../img/social/instagram.svg";
-import { Nav, Logo, Menu, Social } from "./styles";
+import { Nav, Menu } from "./styles";
+import { Wrap, Logo, Social } from "../../common-styles";
 
 const Navbar = class extends React.Component {
   constructor(props) {
@@ -33,13 +34,15 @@ const Navbar = class extends React.Component {
 
   render() {
     return (
-      <Nav role="navigation" aria-label="main-navigation">
-        <Link to="/" title="Logo">
-          <Logo src={logo} alt="Horizon Cycling in St Joseph, MO" />
-        </Link>
+      <header>
+        <Wrap>
+          <Nav role="navigation" aria-label="main-navigation">
+            <Link to="/" title="Logo">
+              <Logo src={logo} alt="Horizon Cycling in St Joseph, MO" />
+            </Link>
 
-        {/* eslint-disable-next-line */}
-        {/* <div
+            {/* eslint-disable-next-line */}
+            {/* <div
             className={`navbar-burger burger ${this.state.navBarActiveClass}`}
             data-target="navMenu"
             onClick={() => this.toggleHamburger()}
@@ -49,42 +52,44 @@ const Navbar = class extends React.Component {
             <span />
           </div> */}
 
-        <Menu id="navMenu">
-          <Link to="/" activeClassName="active">
-            Home
-          </Link>
-          <Link to="/products" activeClassName="active">
-            Service
-          </Link>
-          <Link to="/blog" activeClassName="active">
-            Events
-          </Link>
-          <Link to="/contact" activeClassName="active">
-            Bikes
-          </Link>
-          <Link to="/contact/examples" activeClassName="active">
-            Teams
-          </Link>
-          <Social>
-            <a
-              title="facebook"
-              href="https://www.facebook.com/horizon.cycling/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img src={facebook} alt="Horizon Cycling on Facebook" />
-            </a>
-            <a
-              title="instagram"
-              href="https://www.instagram.com/horizoncycling/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img src={instagram} alt="Horizon Cycling on Instagram" />
-            </a>
-          </Social>
-        </Menu>
-      </Nav>
+            <Menu id="navMenu">
+              <Link to="/" activeClassName="active">
+                Home
+              </Link>
+              <Link to="/products" activeClassName="active">
+                Service
+              </Link>
+              <Link to="/blog" activeClassName="active">
+                Events
+              </Link>
+              <Link to="/contact" activeClassName="active">
+                Bikes
+              </Link>
+              <Link to="/contact/examples" activeClassName="active">
+                Teams
+              </Link>
+              <Social>
+                <a
+                  title="facebook"
+                  href="https://www.facebook.com/horizon.cycling/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img src={facebook} alt="Horizon Cycling on Facebook" />
+                </a>
+                <a
+                  title="instagram"
+                  href="https://www.instagram.com/horizoncycling/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img src={instagram} alt="Horizon Cycling on Instagram" />
+                </a>
+              </Social>
+            </Menu>
+          </Nav>
+        </Wrap>
+      </header>
     );
   }
 };

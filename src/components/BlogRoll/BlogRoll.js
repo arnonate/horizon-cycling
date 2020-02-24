@@ -64,7 +64,7 @@ export default () => (
           filter: {
             frontmatter: {
               templateKey: { eq: "Post" }
-              featuredpost: { eq: true }
+              # featuredpost: { eq: true }
             }
           }
         ) {
