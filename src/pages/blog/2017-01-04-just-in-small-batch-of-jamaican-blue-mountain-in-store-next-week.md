@@ -1,18 +1,20 @@
 ---
 templateKey: Post
-title: "Just in: small batch of Jamaican Blue Mountain in store next week"
-date: 2017-01-04T15:04:10.000Z
-featuredpost: true
+title: Jack's 2020 Fuel EX
+date: 2020-02-24T15:04:10.000Z
 description: >-
-  We’re proud to announce that we’ll be offering a small batch of Jamaica Blue
-  Mountain coffee beans in our store next week.
+  Fuel EX is a versatile full suspension mountain bike that’s fast on
+  singletrack, capable in the rough, and fun wherever you ride it. Our most
+  popular trail bike is built with 130mm of travel in the rear and 140mm up
+  front, innovative frame and suspension tech, and performance parts that keep
+  you ripping on the widest variety of terrain. If you’re looking for one
+  mountain bike that does it all, you’re heading down the right trail with Fuel
+  EX.
+featuredpost: true
+featuredimage: /img/ex 1.jpg
 tags:
-  - jamaica
-  - green beans
-  - flavor
-  - tasting
+  - bikes
 ---
-
 We expect the shipment of a limited quantity of green beans next Monday. We’ll be offering the roasted beans from Tuesday, but quantities are limited, so be quick.
 
 Blue Mountain Peak is the highest mountain in Jamaica and one of the highest peaks in the Caribbean at 7,402 ft. It is the home of Blue Mountain coffee and their famous tours. It is located on the border of the Portland and Saint Thomas parishes of Jamaica.
@@ -24,11 +26,3 @@ The Blue Mountains are considered by many to be a hiker's and camper's paradise.
 > Some of the plants found on the Blue Mountain cannot be found anywhere else in the world and they are often of a dwarfed sort.
 
 This is mainly due to the cold climate which inhibits growth. The small coffee farming communities of Claverty Cottage and Hagley Gap are located near the peak.
-
-## What you need to know before trying
-
-Jamaican Blue Mountain Coffee or Jamaica Blue Mountain Coffee is a classification of coffee grown in the Blue Mountains of Jamaica. The best lots of Blue Mountain coffee are noted for their mild flavor and lack of bitterness. Over the past few decades, this coffee has developed a reputation that has made it one of the most expensive and sought-after coffees in the world. Over 80% of all Jamaican Blue Mountain Coffee is exported to Japan. In addition to its use for brewed coffee, the beans are the flavor base of Tia Maria coffee liqueur.
-
-Jamaican Blue Mountain Coffee is a globally protected certification mark, meaning only coffee certified by the Coffee Industry Board of Jamaica can be labeled as such. It comes from a recognized growing region in the Blue Mountain region of Jamaica, and its cultivation is monitored by the Coffee Industry Board of Jamaica.
-
-The Blue Mountains are generally located between Kingston to the south and Port Antonio to the north. Rising 7,402 ft, they are some of the highest mountains in the Caribbean. The climate of the region is cool and misty with high rainfall. The soil is rich, with excellent drainage. This combination of climate and soil is considered ideal for coffee.
