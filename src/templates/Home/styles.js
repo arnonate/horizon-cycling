@@ -7,6 +7,10 @@ export const Hero = styled.div`
   background-size: cover;
   background-position: top center;
   position: relative;
+
+  @media (min-width: ${Tokens.break}) {
+    padding-bottom: calc(${Tokens.rhythm} * 4);
+  }
 `;
 
 export const Shout = styled.h2`
@@ -14,13 +18,22 @@ export const Shout = styled.h2`
   padding: ${Tokens.gutter} calc(${Tokens.gutter} * 2);
   color: ${Tokens.color.white};
   font-family: ${Tokens.font.family.droid.slab};
-  font-size: ${Tokens.font.size.xl};
+  font-size: ${Tokens.font.size.lg};
   line-height: ${Tokens.font.lineHeight.lg};
   text-transform: uppercase;
-  width: 40%;
   position: absolute;
+  left: 0;
   right: 0;
-  bottom: calc(${Tokens.gutter} * 2);
+  bottom: 0;
+
+  @media (min-width: ${Tokens.break}) {
+    width: 40%;
+    left: auto;
+    right: 0;
+    bottom: calc(${Tokens.gutter} * 2);
+    font-size: ${Tokens.font.size.xl};
+    line-height: ${Tokens.font.lineHeight.lg};
+  }
 `;
 
 export const Hill = styled.div`

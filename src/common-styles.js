@@ -37,17 +37,30 @@ export const Wrap = styled.div`
 
 export const Flex = styled.div`
   display: flex;
-  justify-content: space-between;
-  align-items: ${props => (props.align ? props.align : `initial`)};
+  flex-direction: column;
 
-  & > *:first-child {
-    width: ${props =>
-      props.width ? `calc(${props.width[0]}% - ${Tokens.gutter})` : `auto`};
+  & > * + * {
+    margin-top: ${Tokens.rhythm};
   }
 
-  & > *:last-child {
-    width: ${props =>
-      props.width ? `calc(${props.width[1]}% - ${Tokens.gutter})` : `auto`};
+  @media (min-width: ${Tokens.break}) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: ${props => (props.align ? props.align : `initial`)};
+
+    & > * + * {
+      margin-top: 0;
+    }
+
+    & > *:first-child {
+      width: ${props =>
+        props.width ? `calc(${props.width[0]}% - ${Tokens.gutter})` : `auto`};
+    }
+
+    & > *:last-child {
+      width: ${props =>
+        props.width ? `calc(${props.width[1]}% - ${Tokens.gutter})` : `auto`};
+    }
   }
 `;
 
@@ -58,7 +71,7 @@ export const Logo = styled.img`
 export const Social = styled.div`
   display: flex;
   align-items: center;
-  padding-right: 0;
+  padding: 0;
 
   & > * {
     line-height: ${Tokens.font.size.sm};
@@ -71,6 +84,11 @@ export const Social = styled.div`
   img {
     width: ${Tokens.font.size.sm};
     height: ${Tokens.font.size.sm};
+  }
+
+  @media (max-width: ${Tokens.break}) {
+    justify-content: center;
+    padding-bottom: ${props => (props.footer ? `${Tokens.rhythm}` : null)};
   }
 `;
 

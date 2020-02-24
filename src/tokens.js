@@ -50,5 +50,6 @@ export const Tokens = {
   transition: {
     timing: `200ms`,
     type: `linear`
-  }
+  },
+  break: `890px`
 };

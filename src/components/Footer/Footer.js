@@ -6,12 +6,12 @@ import logo from "../../img/logo_inverse.svg";
 import facebook from "../../img/social/facebook_inverse.svg";
 import instagram from "../../img/social/instagram_inverse.svg";
 import { Wrap, Section, Flex, Social, Logo } from "../../common-styles";
-import { Divider } from "./styles";
+import { Divider, StyledFooter } from "./styles";
 
 const Footer = class extends React.Component {
   render() {
     return (
-      <footer>
+      <StyledFooter>
         <Section color="blue">
           <Wrap>
             <Divider />
@@ -19,7 +19,7 @@ const Footer = class extends React.Component {
               <Link to="/" title="Logo">
                 <Logo src={logo} alt="Horizon Cycling in St Joseph, MO" />
               </Link>
-              <Social>
+              <Social footer>
                 <a
                   title="facebook"
                   href="https://www.facebook.com/horizon.cycling/"
@@ -90,7 +90,7 @@ const Footer = class extends React.Component {
             </Link>
           </li>
         </ul> */}
-      </footer>
+      </StyledFooter>
     );
   }
 };
