@@ -90,13 +90,23 @@ export const IndexPageTemplate = ({
                   {intro.weekendHours}
                 </small>
               </p>
-              <a
-                href="https://goo.gl/maps/oA7Xq5ykBLVpSFBm7"
+              <ButtonLink
+                color="gold"
+                href="/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <small>Get Directions!</small>
-              </a>
+                View Service
+              </ButtonLink>
+              <p>
+                <a
+                  href="https://goo.gl/maps/oA7Xq5ykBLVpSFBm7"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <small>Get Directions!</small>
+                </a>
+              </p>
             </Info>
             <div>
               <BorderedHeading>Events</BorderedHeading>
@@ -127,7 +137,8 @@ export const IndexPageTemplate = ({
                   Check out the bikes we are digging right now..
                 </small>
               </p>
-              <ButtonLink href="/blog">View Them All</ButtonLink>
+              {/* <ButtonLink href="/blog">View Them All</ButtonLink> */}
+              <ButtonLink href="/">View Them All</ButtonLink>
             </div>
             <div>
               <BlogRoll />

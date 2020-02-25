@@ -42,33 +42,19 @@ const Navbar = class extends React.Component {
                 <Logo src={logo} alt="Horizon Cycling in St Joseph, MO" />
               </Link>
 
-              {/* eslint-disable-next-line */}
-              {/* <div
-            className={`navbar-burger burger ${this.state.navBarActiveClass}`}
-            data-target="navMenu"
-            onClick={() => this.toggleHamburger()}
-          >
-            <span />
-            <span />
-            <span />
-          </div> */}
+              {/* <Link to="/products" activeClassName="active"> */}
+              {/* <Link to="/blog" activeClassName="active"> */}
+              {/* <Link to="/contact" activeClassName="active"> */}
+              {/* <Link to="/contact/examples" activeClassName="active"> */}
 
               <Menu id="navMenu">
                 <Link to="/" activeClassName="active">
                   Home
                 </Link>
-                <Link to="/products" activeClassName="active">
-                  Service
-                </Link>
-                <Link to="/blog" activeClassName="active">
-                  Events
-                </Link>
-                <Link to="/contact" activeClassName="active">
-                  Bikes
-                </Link>
-                <Link to="/contact/examples" activeClassName="active">
-                  Teams
-                </Link>
+                <Link to="/">Service</Link>
+                <Link to="/">Events</Link>
+                <Link to="/">Bikes</Link>
+                <Link to="/">Teams</Link>
                 <Social>
                   <a
                     title="facebook"

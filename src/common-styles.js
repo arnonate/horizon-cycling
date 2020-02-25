@@ -32,7 +32,11 @@ export const Wrap = styled.div`
   max-width: ${props =>
     props.narrow ? `${Tokens.wrap.narrow}` : `${Tokens.wrap.wide}`};
   margin: auto;
-  padding: 0 ${Tokens.gutter};
+  padding: 0 calc(${Tokens.gutter} / 2);
+
+  @media (min-width: ${Tokens.break}) {
+    padding: 0 ${Tokens.gutter};
+  }
 `;
 
 export const Flex = styled.div`
@@ -65,7 +69,9 @@ export const Flex = styled.div`
 `;
 
 export const Logo = styled.img`
-  width: 300px;
+  width: 100%;
+  max-width: 300px;
+  height: auto;
 `;
 
 export const Social = styled.div`

@@ -30,7 +30,7 @@ export const HeroImage = styled.div`
 
 export const Shout = styled.h2`
   background-color: ${Tokens.color.blue};
-  padding: ${Tokens.gutter} calc(${Tokens.gutter} * 2);
+  padding: ${Tokens.gutter};
   color: ${Tokens.color.white};
   font-family: ${Tokens.font.family.droid.slab};
   font-size: ${Tokens.font.size.lg};
@@ -40,6 +40,7 @@ export const Shout = styled.h2`
 
   @media (min-width: ${Tokens.break}) {
     position: absolute;
+    padding: ${Tokens.gutter} calc(${Tokens.gutter} * 2);
     width: 40%;
     left: auto;
     right: 0;
@@ -52,12 +53,16 @@ export const Shout = styled.h2`
 export const Hill = styled.div`
   position: absolute;
   content: "";
-  top: 55%;
+  top: 85%;
   left: 50%;
   width: 200vw;
   height: 600px;
   background-color: ${Tokens.color.mute};
   transform: rotate(-8deg) translate(-50%, -50%);
+
+  @media (min-width: ${Tokens.break}) {
+    top: 55%;
+  }
 `;
 
 export const Intro = styled.div`
@@ -69,10 +74,6 @@ export const Info = styled.div`
     margin: 0 0 calc(${Tokens.rhythm} / 4);
     line-height: ${Tokens.rhythm};
     font-size: ${Tokens.font.size.base};
-  }
-
-  p {
-    padding-bottom: ${Tokens.rhythm};
   }
 `;
 
@@ -92,8 +93,12 @@ export const RidingHeading = styled.h2`
   padding: ${Tokens.rhythm} ${Tokens.gutter};
   margin: 0 0 ${Tokens.rhythm};
   font-family: ${Tokens.font.family.droid.slab};
-  font-size: ${Tokens.font.size.xl};
+  font-size: ${Tokens.font.size.lg};
   line-height: calc(${Tokens.rhythm} * 2);
   text-transform: uppercase;
   border: calc(${Tokens.border.size} * 2) solid;
+
+  @media (min-width: ${Tokens.break}) {
+    font-size: ${Tokens.font.size.xl};
+  }
 `;
