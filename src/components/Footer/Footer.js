@@ -6,7 +6,7 @@ import logo from "../../img/logo_inverse.svg";
 import facebook from "../../img/social/facebook_inverse.svg";
 import instagram from "../../img/social/instagram_inverse.svg";
 import { Wrap, Section, Flex, Social, Logo } from "../../common-styles";
-import { Divider, StyledFooter } from "./styles";
+import { Divider, StyledFooter, Copyright } from "./styles";
 
 const Footer = class extends React.Component {
   render() {
@@ -38,13 +38,13 @@ const Footer = class extends React.Component {
                 </a>
               </Social>
             </Flex>
-            <p>
+            <Copyright>
               <small>
                 &copy; {moment().format("YYYY")} Horizon Cycling. All rights
                 reserved. This is a <a href="https://midcoast.io">Midcoast</a>{" "}
                 website.
               </small>
-            </p>
+            </Copyright>
           </Wrap>
         </Section>
 

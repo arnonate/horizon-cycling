@@ -11,3 +11,7 @@ export const Divider = styled.div`
   padding-top: ${Tokens.rhythm};
   border-top: 3px solid ${Tokens.color.white};
 `;
+
+export const Copyright = styled.p`
+  padding-top: ${Tokens.rhythm};
+`;

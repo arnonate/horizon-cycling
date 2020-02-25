@@ -1,5 +1,5 @@
-const size = 20;
-const rhythm = size * 1.5;
+const size = 2;
+const rhythm = 3;
 
 export const Tokens = {
   color: {
@@ -22,23 +22,23 @@ export const Tokens = {
       }
     },
     size: {
-      base: `${size}px`,
-      sm: `${size * 0.75}px`,
-      lg: `${size * 1.5}px`,
-      xl: `${size * 2}px`
+      base: `${size}rem`,
+      sm: `${size * 0.75}rem`,
+      lg: `${size * 1.5}rem`,
+      xl: `${size * 2}rem`
     },
     lineHeight: {
-      base: `${rhythm}px`,
-      lg: `${rhythm * 2}px`,
-      xl: `${rhythm * 3}px`
+      base: `${rhythm}rem`,
+      lg: `${rhythm * 2}rem`,
+      xl: `${rhythm * 3}rem`
     },
     weight: {
       normal: "300",
       bold: "700"
     }
   },
-  gutter: `${rhythm}px`,
-  rhythm: `${rhythm}px`,
+  gutter: `${rhythm}rem`,
+  rhythm: `${rhythm}rem`,
   wrap: {
     narrow: "800px",
     wide: "1200px"

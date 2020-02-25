@@ -16,6 +16,7 @@ import {
 import {
   Hill,
   Hero,
+  HeroImage,
   Shout,
   Intro,
   Info,
@@ -38,13 +39,16 @@ export const IndexPageTemplate = ({
       <Hill />
 
       <Wrap>
-        <Hero
-          style={{
-            backgroundImage: `url(${
-              !!image.childImageSharp ? image.childImageSharp.fluid.src : image
-            })`
-          }}
-        >
+        <Hero>
+          <HeroImage
+            style={{
+              backgroundImage: `url(${
+                !!image.childImageSharp
+                  ? image.childImageSharp.fluid.src
+                  : image
+              })`
+            }}
+          />
           <Shout>{heading}</Shout>
         </Hero>
       </Wrap>

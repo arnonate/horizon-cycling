@@ -8,6 +8,7 @@ import { createGlobalStyle } from "styled-components";
 import { Tokens } from "../../tokens";
 
 const GlobalStyle = createGlobalStyle`
+  html { font-size: 62.5%; }
   body {
     font-family: ${Tokens.font.family.inter.body};
     font-size: ${Tokens.font.size.base};

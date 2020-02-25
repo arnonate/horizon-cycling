@@ -3,13 +3,28 @@ import { Tokens } from "../../tokens";
 
 export const Hero = styled.div`
   width: 100%;
-  height: 500px;
+  height: auto;
+  position: relative;
+
+  @media (min-width: ${Tokens.break}) {
+    height: calc(${Tokens.rhythm} * 20);
+  }
+`;
+
+export const HeroImage = styled.div`
+  width: 100%;
+  height: calc(${Tokens.rhythm} * 10);
   background-size: cover;
   background-position: top center;
   position: relative;
 
   @media (min-width: ${Tokens.break}) {
-    padding-bottom: calc(${Tokens.rhythm} * 4);
+    position: absolute;
+    height: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
   }
 `;
 
@@ -21,12 +36,10 @@ export const Shout = styled.h2`
   font-size: ${Tokens.font.size.lg};
   line-height: ${Tokens.font.lineHeight.lg};
   text-transform: uppercase;
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  width: 100%;
 
   @media (min-width: ${Tokens.break}) {
+    position: absolute;
     width: 40%;
     left: auto;
     right: 0;
