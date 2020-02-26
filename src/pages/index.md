@@ -23,7 +23,7 @@ intro:
         Clinic this spring. The clinic will consist of monthly no-drop rides led
         by our very own Brent Petersen that start short and increase in distance
         each month.
-  image: /img/brent.jpg
+  image: /img/Screenshot 2020-02-25 21.31.17.png
   phone: 816.364.2453
   weekdayHours: Open Monday - Friday 10 - 5
   weekendHours: Open Saturday 10 - 2
