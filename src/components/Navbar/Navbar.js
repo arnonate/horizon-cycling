@@ -53,13 +53,15 @@ const Navbar = class extends React.Component {
                 <Link to="/service" activeClassName="active">
                   Service
                 </Link>
-                <Link to="/blog" activeClassName="active">
+                <Link to="/bikes" activeClassName="active">
                   Bikes
                 </Link>
-                <Link to="/" activeClassName="active">
+                <Link to="#0" activeClassName="active">
                   Routes
                 </Link>
-                <Link to="/">Teams</Link>
+                <Link to="#0" activeClassName="active">
+                  Teams
+                </Link>
                 <Social>
                   <a
                     title="facebook"
