@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "gatsby";
-import logo from "../../img/logo.svg";
-import facebook from "../../img/social/facebook.svg";
-import instagram from "../../img/social/instagram.svg";
-import { Nav, Menu } from "./styles";
+import logo from "../../img/logo_inverse.svg";
+import facebook from "../../img/social/facebook_inverse.svg";
+import instagram from "../../img/social/instagram_inverse.svg";
+import { Nav, Menu, Header } from "./styles";
 import { Wrap, Flex, Logo, Social } from "../../common-styles";
 
 const Navbar = class extends React.Component {
@@ -34,7 +34,7 @@ const Navbar = class extends React.Component {
 
   render() {
     return (
-      <header>
+      <Header>
         <Wrap>
           <Nav role="navigation" aria-label="main-navigation">
             <Flex align="center">
@@ -43,7 +43,6 @@ const Navbar = class extends React.Component {
               </Link>
 
               {/* <Link to="/products" activeClassName="active"> */}
-              {/* <Link to="/blog" activeClassName="active"> */}
               {/* <Link to="/contact" activeClassName="active"> */}
               {/* <Link to="/contact/examples" activeClassName="active"> */}
 
@@ -51,9 +50,15 @@ const Navbar = class extends React.Component {
                 <Link to="/" activeClassName="active">
                   Home
                 </Link>
-                <Link to="/">Service</Link>
-                <Link to="/">Events</Link>
-                <Link to="/">Bikes</Link>
+                <Link to="/service" activeClassName="active">
+                  Service
+                </Link>
+                <Link to="/blog" activeClassName="active">
+                  Bikes
+                </Link>
+                <Link to="/" activeClassName="active">
+                  Routes
+                </Link>
                 <Link to="/">Teams</Link>
                 <Social>
                   <a
@@ -77,7 +82,7 @@ const Navbar = class extends React.Component {
             </Flex>
           </Nav>
         </Wrap>
-      </header>
+      </Header>
     );
   }
 };

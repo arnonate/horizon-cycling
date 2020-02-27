@@ -1,7 +1,7 @@
 ---
-templateKey: "About"
-path: /about
-title: About our values
+templateKey: "Service"
+path: /service
+title: Shop Services and Team
 ---
 
 ### Shade-grown coffee

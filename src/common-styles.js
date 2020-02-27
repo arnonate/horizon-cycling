@@ -3,6 +3,7 @@ import { Tokens } from "./tokens";
 
 export const Main = styled.main`
   overflow: hidden;
+  background-color: ${Tokens.color.blue};
 `;
 
 export const Section = styled.section`

@@ -35,7 +35,7 @@ export const IndexPageTemplate = ({
   <Main>
     <SEOTitle>{title}</SEOTitle>
 
-    <Section>
+    <Section color="blue" style={{ paddingTop: "0" }}>
       <Hill />
 
       <Wrap>
