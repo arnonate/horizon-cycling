@@ -14,34 +14,32 @@ class BlogRoll extends React.Component {
         {posts &&
           posts.map(({ node: post }) => {
             return (
-              post.frontmatter.featuredpost && (
-                <article key={post.id}>
-                  <BlogRollHeading>
-                    <a href={post.fields.slug}>{post.frontmatter.title}</a>
-                  </BlogRollHeading>
+              <article key={post.id}>
+                <BlogRollHeading>
+                  <a href={post.fields.slug}>{post.frontmatter.title}</a>
+                </BlogRollHeading>
 
-                  {post.frontmatter.featuredimage ? (
-                    <PostPreview>
-                      <PostImage
-                        style={{
-                          backgroundImage: `url(${
-                            !!post.frontmatter.featuredimage.childImageSharp
-                              ? post.frontmatter.featuredimage.childImageSharp
-                                  .fluid.src
-                              : post.frontmatter.featuredimage
-                          })`
-                        }}
-                      ></PostImage>
-                    </PostPreview>
-                  ) : null}
+                {post.frontmatter.featuredimage ? (
+                  <PostPreview>
+                    <PostImage
+                      style={{
+                        backgroundImage: `url(${
+                          !!post.frontmatter.featuredimage.childImageSharp
+                            ? post.frontmatter.featuredimage.childImageSharp
+                                .fluid.src
+                            : post.frontmatter.featuredimage
+                        })`
+                      }}
+                    ></PostImage>
+                  </PostPreview>
+                ) : null}
 
-                  <p>
-                    <small>{post.excerpt}</small>
-                  </p>
+                <p>
+                  <small>{post.excerpt}</small>
+                </p>
 
-                  <ButtonLink href={post.fields.slug}>Read More</ButtonLink>
-                </article>
-              )
+                <ButtonLink href={post.fields.slug}>Read More</ButtonLink>
+              </article>
             );
           })}
       </Flex>
