@@ -2,6 +2,7 @@
 templateKey: Post
 title: Brad's Checkpoint SL 7
 date: 2020-02-28T18:26:11.637Z
+description: jkjhk
 featuredpost: false
 featuredimage: /img/checkpoint.jpg
 tags:
