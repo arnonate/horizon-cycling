@@ -2,7 +2,7 @@
 templateKey: Post
 title: Blake's Top Fuel 9.8
 date: 2020-02-28T18:46:03.161Z
-featuredimage: /img/TK19_Top_Fuel_DSC_0169_marquee1 (1) 1.jpg
+featuredimage: /img/topfuel.jpg
 tags:
   - MTB
   - Top Fuel
