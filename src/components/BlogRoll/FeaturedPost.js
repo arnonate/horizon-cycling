@@ -4,20 +4,20 @@ import { graphql, StaticQuery } from "gatsby";
 import { ButtonLink, Flex } from "../../common-styles";
 import { PostPreview, PostImage, HoverContent } from "./styles";
 
-class BlogRoll extends React.Component {
+class FeaturedPost extends React.Component {
   render() {
     const { data } = this.props;
     const { edges: posts } = data.allMarkdownRemark;
 
     return (
-      <Flex width={[50, 50]}>
+      <Flex width={[100]}>
         {posts &&
           posts.map(({ node: post }) => {
             return (
               post.frontmatter.featuredpost && (
                 <div key={post.id}>
                   {post.frontmatter.featuredimage ? (
-                    <PostPreview>
+                    <PostPreview single>
                       <PostImage
                         className="animateOpacity"
                         style={{
@@ -47,7 +47,7 @@ class BlogRoll extends React.Component {
   }
 }
 
-BlogRoll.propTypes = {
+FeaturedPost.propTypes = {
   data: PropTypes.shape({
     allMarkdownRemark: PropTypes.shape({
       edges: PropTypes.array
@@ -58,10 +58,15 @@ BlogRoll.propTypes = {
 export default () => (
   <StaticQuery
     query={graphql`
-      query BlogRollQuery {
+      query FeaturedPostQuery {
         allMarkdownRemark(
           sort: { order: DESC, fields: [frontmatter___date] }
-          filter: { frontmatter: { templateKey: { eq: "Post" } } }
+          filter: {
+            frontmatter: {
+              templateKey: { eq: "Post" }
+              featuredpost: { eq: true }
+            }
+          }
         ) {
           edges {
             node {
@@ -88,6 +93,6 @@ export default () => (
         }
       }
     `}
-    render={(data, count) => <BlogRoll data={data} count={count} />}
+    render={(data, count) => <FeaturedPost data={data} count={count} />}
   />
 );

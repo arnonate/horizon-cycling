@@ -4,7 +4,10 @@ import { Tokens } from "../../tokens";
 export const PostPreview = styled.article`
   position: relative;
   width: 100%;
-  height: calc(${Tokens.rhythm} * 14);
+  height: ${props =>
+    props.single
+      ? `calc(${Tokens.rhythm} * 14)`
+      : `calc(${Tokens.rhythm} * 10)`};
   margin-bottom: ${Tokens.rhythm};
   transition: visibility ${Tokens.transition.timing} ${Tokens.transition.type};
 

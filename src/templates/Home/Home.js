@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { graphql } from "gatsby";
 import Layout from "../../components/Layout";
 import Events from "../../components/Events";
-import BlogRoll from "../../components/BlogRoll";
+import FeaturedPost from "../../components/BlogRoll/FeaturedPost";
 import {
   Main,
   Section,
@@ -141,7 +141,7 @@ export const IndexPageTemplate = ({
               <ButtonLink href="/">View Them All</ButtonLink>
             </div>
             <div>
-              <BlogRoll />
+              <FeaturedPost />
             </div>
           </Flex>
         </Riding>
