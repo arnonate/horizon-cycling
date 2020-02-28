@@ -31,7 +31,6 @@ class FeaturedPost extends React.Component {
                       ></PostImage>
                       <HoverContent className="animateVisibility">
                         <h2>{post.frontmatter.title}</h2>
-                        {/* {post.excerpt} */}
                         <ButtonLink href={post.fields.slug}>
                           Check it Out !!
                         </ButtonLink>

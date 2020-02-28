@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { graphql, StaticQuery } from "gatsby";
 import { ButtonLink, Flex } from "../../common-styles";
-import { PostPreview, PostImage, HoverContent } from "./styles";
+import { PostPreview, PostImage, BlogRollHeading } from "./styles";
 
 class BlogRoll extends React.Component {
   render() {
@@ -15,11 +15,14 @@ class BlogRoll extends React.Component {
           posts.map(({ node: post }) => {
             return (
               post.frontmatter.featuredpost && (
-                <div key={post.id}>
+                <article key={post.id}>
+                  <BlogRollHeading>
+                    <a href={post.fields.slug}>{post.frontmatter.title}</a>
+                  </BlogRollHeading>
+
                   {post.frontmatter.featuredimage ? (
                     <PostPreview>
                       <PostImage
-                        className="animateOpacity"
                         style={{
                           backgroundImage: `url(${
                             !!post.frontmatter.featuredimage.childImageSharp
@@ -29,16 +32,17 @@ class BlogRoll extends React.Component {
                           })`
                         }}
                       ></PostImage>
-                      <HoverContent className="animateVisibility">
-                        <h2>{post.frontmatter.title}</h2>
-                        {/* {post.excerpt} */}
-                        <ButtonLink href={post.fields.slug}>
-                          Check it Out !!
-                        </ButtonLink>
-                      </HoverContent>
                     </PostPreview>
                   ) : null}
-                </div>
+
+                  <p>
+                    <small>{post.excerpt}</small>
+                  </p>
+
+                  <ButtonLink href={post.fields.slug}>
+                    Check it Out !!
+                  </ButtonLink>
+                </article>
               )
             );
           })}

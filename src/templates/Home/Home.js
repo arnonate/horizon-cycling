@@ -137,8 +137,7 @@ export const IndexPageTemplate = ({
                   Check out the bikes we are digging right now..
                 </small>
               </p>
-              {/* <ButtonLink href="/blog">View Them All</ButtonLink> */}
-              <ButtonLink href="/">View Them All</ButtonLink>
+              <ButtonLink href="/bikes">View Them All</ButtonLink>
             </div>
             <div>
               <FeaturedPost />

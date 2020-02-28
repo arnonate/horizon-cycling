@@ -1,6 +1,10 @@
 import styled from "styled-components";
 import { Tokens } from "../../tokens";
 
+export const BlogRollHeading = styled.h2`
+  padding-bottom: ${Tokens.rhythm};
+`;
+
 export const PostPreview = styled.article`
   position: relative;
   width: 100%;
