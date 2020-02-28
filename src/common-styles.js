@@ -52,17 +52,18 @@ export const Flex = styled.div`
     flex-direction: row;
     justify-content: space-between;
     align-items: ${props => (props.align ? props.align : `initial`)};
+    flex-wrap: ${props => (props.wrap ? props.wrap : `nowrap`)};
 
     & > * + * {
       margin-top: 0;
     }
 
-    & > *:first-child {
+    & > *:nth-child(odd) {
       width: ${props =>
         props.width ? `calc(${props.width[0]}% - ${Tokens.gutter})` : `auto`};
     }
 
-    & > *:last-child {
+    & > *:nth-child(even) {
       width: ${props =>
         props.width ? `calc(${props.width[1]}% - ${Tokens.gutter})` : `auto`};
     }

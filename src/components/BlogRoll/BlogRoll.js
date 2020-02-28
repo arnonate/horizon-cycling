@@ -10,7 +10,7 @@ class BlogRoll extends React.Component {
     const { edges: posts } = data.allMarkdownRemark;
 
     return (
-      <Flex width={[50, 50]}>
+      <Flex width={[50, 50]} wrap="wrap">
         {posts &&
           posts.map(({ node: post }) => {
             return (
