@@ -39,9 +39,7 @@ class BlogRoll extends React.Component {
                     <small>{post.excerpt}</small>
                   </p>
 
-                  <ButtonLink href={post.fields.slug}>
-                    Check it Out !!
-                  </ButtonLink>
+                  <ButtonLink href={post.fields.slug}>Read More</ButtonLink>
                 </article>
               )
             );
