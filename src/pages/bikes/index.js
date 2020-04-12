@@ -3,15 +3,7 @@ import React from "react";
 import Layout from "../../components/Layout";
 import BlogRoll from "../../components/BlogRoll";
 
-import {
-  Main,
-  Section,
-  Wrap,
-  Flex,
-  SEOTitle,
-  BorderedHeading,
-  ButtonLink
-} from "../../common-styles";
+import { Section, Wrap, SEOTitle, BorderedHeading } from "../../common-styles";
 
 export default class BlogIndexPage extends React.Component {
   render() {

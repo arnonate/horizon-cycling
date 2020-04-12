@@ -33,7 +33,7 @@ export const Wrap = styled.div`
   max-width: ${props =>
     props.narrow ? `${Tokens.wrap.narrow}` : `${Tokens.wrap.wide}`};
   margin: auto;
-  padding: 0 calc(${Tokens.gutter} / 2);
+  padding: ${props => (props.collapse ? `0` : `0 calc(${Tokens.gutter} / 2)`)};
 
   @media (min-width: ${Tokens.break}) {
     padding: 0 ${Tokens.gutter};

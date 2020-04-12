@@ -3,6 +3,12 @@ import { Tokens } from "../../tokens";
 
 export const Header = styled.header`
   background-color: ${Tokens.color.blue};
+
+  a {
+    @media (max-width: ${Tokens.break}) {
+      text-align: center;
+    }
+  }
 `;
 
 export const Nav = styled.nav`

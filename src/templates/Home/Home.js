@@ -38,7 +38,7 @@ export const IndexPageTemplate = ({
     <Section color="blue" style={{ paddingTop: "0" }}>
       <Hill />
 
-      <Wrap>
+      <Wrap collapse>
         <Hero>
           <HeroImage
             style={{

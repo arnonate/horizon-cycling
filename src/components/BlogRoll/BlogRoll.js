@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { graphql, StaticQuery } from "gatsby";
 import { ButtonLink, Flex } from "../../common-styles";
-import { PostPreview, PostImage, BlogRollHeading } from "./styles";
+import { PostPreview, PostImage, BlogRollHeading, PostFooter } from "./styles";
 
 class BlogRoll extends React.Component {
   render() {
@@ -38,7 +38,9 @@ class BlogRoll extends React.Component {
                   <small>{post.excerpt}</small>
                 </p>
 
-                <ButtonLink href={post.fields.slug}>Read More</ButtonLink>
+                <PostFooter>
+                  <ButtonLink href={post.fields.slug}>Read More</ButtonLink>
+                </PostFooter>
               </article>
             );
           })}

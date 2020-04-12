@@ -43,3 +43,7 @@ export const HoverContent = styled.div`
   transform: translate(-50%, -50%);
   text-align: center;
 `;
+
+export const PostFooter = styled.footer`
+  padding-bottom: ${Tokens.rhythm};
+`;

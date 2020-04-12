@@ -56,12 +56,12 @@ const Navbar = class extends React.Component {
                 <Link to="/bikes" activeClassName="active">
                   Bikes
                 </Link>
-                <Link to="#0" activeClassName="active">
+                {/* <Link to="#0" activeClassName="active">
                   Routes
-                </Link>
-                <Link to="#0" activeClassName="active">
+                </Link> */}
+                {/* <Link to="#0" activeClassName="active">
                   Teams
-                </Link>
+                </Link> */}
                 <Social>
                   <a
                     title="facebook"
