@@ -1,8 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { kebabCase } from "lodash";
 import Helmet from "react-helmet";
-import { graphql, Link } from "gatsby";
+import { graphql } from "gatsby";
+// import styled from "styled-components";
+
+// import { Tokens } from "../../tokens";
 import Layout from "../../components/Layout";
 import Content, { HTMLContent } from "../../components/Content";
 import { Wrap, Section, SEOTitle, BorderedHeading } from "../../common-styles";
@@ -10,46 +12,31 @@ import { Wrap, Section, SEOTitle, BorderedHeading } from "../../common-styles";
 export const BlogPostTemplate = ({
   content,
   contentComponent,
-  tags,
   title,
   helmet,
-  image
+  image,
 }) => {
   const PostContent = contentComponent || Content;
 
   return (
-    <Section>
-      {helmet || ""}
-      <Wrap narrow>
-        <SEOTitle>{title}</SEOTitle>
-        <BorderedHeading>{title}</BorderedHeading>
+    <>
+      <img
+        alt={title}
+        src={!!image.childImageSharp ? image.childImageSharp.fluid.src : image}
+        style={{ width: "100%", height: "auto" }}
+      />
 
-        <div
-          style={{
-            backgroundImage: `url(${
-              !!image.childImageSharp ? image.childImageSharp.fluid.src : image
-            })`,
-            width: "100%",
-            height: "400px"
-          }}
-        />
+      <Section>
+        {helmet || ""}
 
-        <PostContent content={content} />
+        <Wrap narrow>
+          <SEOTitle>{title}</SEOTitle>
+          <BorderedHeading>{title}</BorderedHeading>
 
-        {tags && tags.length ? (
-          <div style={{ marginTop: `4rem` }}>
-            <h4>Tags</h4>
-            <ul className="taglist">
-              {tags.map(tag => (
-                <li key={tag + `tag`}>
-                  <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-        ) : null}
-      </Wrap>
-    </Section>
+          <PostContent content={content} />
+        </Wrap>
+      </Section>
+    </>
   );
 };
 
@@ -59,7 +46,7 @@ BlogPostTemplate.propTypes = {
   description: PropTypes.string,
   title: PropTypes.string,
   helmet: PropTypes.object,
-  image: PropTypes.object
+  image: PropTypes.object,
 };
 
 const BlogPost = ({ data }) => {
@@ -86,8 +73,8 @@ const BlogPost = ({ data }) => {
 
 BlogPost.propTypes = {
   data: PropTypes.shape({
-    markdownRemark: PropTypes.object
-  })
+    markdownRemark: PropTypes.object,
+  }),
 };
 
 export default BlogPost;
@@ -101,7 +88,6 @@ export const pageQuery = graphql`
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
         title
-        tags
         featuredimage {
           childImageSharp {
             fluid(maxWidth: 1200, quality: 80) {
