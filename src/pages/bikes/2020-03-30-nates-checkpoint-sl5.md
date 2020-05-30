@@ -1,9 +1,9 @@
 ---
 templateKey: Post
-title: Nate's Checkpoint SL5
+title: Nate's 2020 Checkpoint SL5
 date: 2020-03-30T03:18:30.524Z
 featuredpost: true
-featuredimage: /img/B4B58F4B-34B2-48C5-AC3A-7C11B88E80E0_1_201_a.jpeg
+featuredimage: /img/200419-Nate Arnold-cycling-008.jpg
 tags:
   - gravel
 ---
@@ -11,4 +11,4 @@ tags:
 
 Hello!
 
-![](/img/6F59224C-2CA4-4F10-8CC4-C27675207D3B_1_201_a.jpeg)
+![Trek Checkpoint](/img/200419-Nate Arnold-cycling-048.jpg)
