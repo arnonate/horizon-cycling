@@ -15,8 +15,14 @@ From Nate:
 
 > If I could only have one bike, it would definitely be this one. After logging over 7400 miles on this beast I can confidently say that, with the correct tire setup, I can take this bike and have fun on almost any adventure. From the sandy shores of Lake Michigan to rocky Midwest gravel; Over smooth blacktop, dirt or chunky Ozark back roads, we have seen almost everything together.
 
+
+
 ![Trek Checkpoint 2020](/img/200419-Nate Arnold-cycling-048.jpg)
 
-Nate has raced his Checkpoint all over the Midwest, even stealing a few podium spots along the way. He plans to keep adding miles and hauling his Checkpoint to races in 2020 if they ever happen. In the end, riding bikes should be fun and the Checkpoint definitely doesn't disapoint.
+
+
+Nate has raced his Checkpoint all over the Midwest, even stealing a few podium spots along the way. He plans to keep adding miles and hauling his Checkpoint to races in 2020 if they ever happen. In the end, riding bikes should be fun and the Checkpoint definitely doesn't disappoint.
+
+
 
 ![Checkpoint 2020 Gravel](/img/200419-Nate Arnold-cycling-095.jpg)
