@@ -11,7 +11,7 @@ import {
   Flex,
   SEOTitle,
   BorderedHeading,
-  ButtonLink
+  ButtonLink,
 } from "../../common-styles";
 import {
   Hill,
@@ -22,7 +22,7 @@ import {
   Info,
   InfoImage,
   Riding,
-  RidingHeading
+  RidingHeading,
 } from "./styles";
 
 export const IndexPageTemplate = ({
@@ -30,7 +30,7 @@ export const IndexPageTemplate = ({
   title,
   heading,
   description,
-  intro
+  intro,
 }) => (
   <Main>
     <SEOTitle>{title}</SEOTitle>
@@ -46,7 +46,7 @@ export const IndexPageTemplate = ({
                 !!image.childImageSharp
                   ? image.childImageSharp.fluid.src
                   : image
-              })`
+              })`,
             }}
           />
           <Shout>{heading}</Shout>
@@ -56,7 +56,7 @@ export const IndexPageTemplate = ({
 
     <Section color="mute" paddingBottom>
       <Wrap narrow>
-        <p>{description}</p>
+        <div dangerouslySetInnerHTML={{ __html: description }} />
       </Wrap>
     </Section>
 
@@ -72,7 +72,7 @@ export const IndexPageTemplate = ({
                     !!intro.image.childImageSharp
                       ? intro.image.childImageSharp.fluid.src
                       : intro.image
-                  })`
+                  })`,
                 }}
                 alt="Horizon Cycling St Joseph, MO Bike Maintenance"
               ></InfoImage>
@@ -161,8 +161,8 @@ IndexPageTemplate.propTypes = {
     phone: PropTypes.string,
     weekdayHours: PropTypes.string,
     weekendHours: PropTypes.string,
-    events: PropTypes.array
-  })
+    events: PropTypes.array,
+  }),
 };
 
 const IndexPage = ({ data }) => {
@@ -186,9 +186,9 @@ const IndexPage = ({ data }) => {
 IndexPage.propTypes = {
   data: PropTypes.shape({
     markdownRemark: PropTypes.shape({
-      frontmatter: PropTypes.object
-    })
-  })
+      frontmatter: PropTypes.object,
+    }),
+  }),
 };
 
 export default IndexPage;
