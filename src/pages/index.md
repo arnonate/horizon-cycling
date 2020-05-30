@@ -4,16 +4,14 @@ title: 'Horizon Cycling St Joseph, MO'
 image: /img/checkpoint.jpg
 heading: The Best Damn Bike Shop in the Midwest
 description: >-
-  HORIZON CYCLING is St. Joesph’s only retail bicycle shop. Established in 2012,
-  Horizon Cycling is a staple in the St. Joseph cycling community.
-
+  HORIZON CYCLING is St. Joseph’s only retail bicycle shop. Established in 2012,
+  Horizon Cycling is a staple in the St. Joseph cycling community.\n
 
   We sell new bikes from Trek, Electra, Cannondale and Santa Cruz. In addition
   to complete bikes, we also have a full lineup of cycling apparel and
   accessories from Bontrager and others. We’re also an authorized dealer for
   many brands including Shimano, SRAM, Fox Shox, Chris King, Phil Wood, Hope,
-  Industry Nine, Osprey, and more.
-
+  Industry Nine, Osprey, and more.\n
 
   Our service is top-tier and we take pride in every bike we turn out. We truly
   believe we are the best bike shop in the Midwest. Come check us out for
