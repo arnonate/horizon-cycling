@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { graphql } from "gatsby";
+import { HTMLContent } from "../../components/Content";
 import Layout from "../../components/Layout";
 import Events from "../../components/Events";
 import FeaturedPost from "../../components/BlogRoll/FeaturedPost";
@@ -56,7 +57,7 @@ export const IndexPageTemplate = ({
 
     <Section color="mute" paddingBottom>
       <Wrap narrow>
-        <div dangerouslySetInnerHTML={{ __html: description }} />
+        <HTMLContent className="content" content={description} />
       </Wrap>
     </Section>
 
@@ -175,7 +176,7 @@ const IndexPage = ({ data }) => {
         heading={frontmatter.heading}
         subheading={frontmatter.subheading}
         mainpitch={frontmatter.mainpitch}
-        description={frontmatter.description}
+        description={data.markdownRemark.html}
         intro={frontmatter.intro}
       />
     </Layout>

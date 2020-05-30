@@ -29,6 +29,11 @@ export const Section = styled.section`
   }
 
   .content {
+    p + p {
+      /* text-indent: 0; */
+      padding-top: ${Tokens.rhythm};
+    }
+
     h3 {
       padding-bottom: ${Tokens.rhythm};
     }

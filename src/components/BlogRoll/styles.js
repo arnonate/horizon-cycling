@@ -3,12 +3,17 @@ import { Tokens } from "../../tokens";
 
 export const BlogRollHeading = styled.h2`
   padding-bottom: ${Tokens.rhythm};
+  line-height: calc(${Tokens.rhythm});
+
+  a {
+    text-decoration: none;
+  }
 `;
 
 export const PostPreview = styled.article`
   position: relative;
   width: 100%;
-  height: ${props =>
+  height: ${(props) =>
     props.single
       ? `calc(${Tokens.rhythm} * 14)`
       : `calc(${Tokens.rhythm} * 10)`};
