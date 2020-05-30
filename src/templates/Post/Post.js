@@ -33,7 +33,7 @@ export const BlogPostTemplate = ({
           <SEOTitle>{title}</SEOTitle>
           <BorderedHeading>{title}</BorderedHeading>
 
-          <PostContent content={content} />
+          <PostContent className="content" content={content} />
         </Wrap>
       </Section>
     </>

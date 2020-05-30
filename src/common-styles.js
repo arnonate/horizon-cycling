@@ -8,32 +8,49 @@ export const Main = styled.main`
 
 export const Section = styled.section`
   position: relative;
-  background-color: ${props =>
+  background-color: ${(props) =>
     props.color ? `${Tokens.color[props.color]}` : `${Tokens.color.white}`};
-  color: ${props =>
+  color: ${(props) =>
     props.color && props.color === "blue"
       ? `${Tokens.color.white}`
       : `${Tokens.color.blue}`};
   padding: ${Tokens.rhythm} 0;
-  padding-bottom: ${props =>
+  padding-bottom: ${(props) =>
     props.paddingBottom ? `calc(${Tokens.rhythm} * 2)` : `${Tokens.rhythm}`};
 
   a {
-    color: ${props =>
+    color: ${(props) =>
       props.color && props.color === "blue" ? `${Tokens.color.white}` : null};
 
     &:hover {
-      color: ${props =>
+      color: ${(props) =>
         props.color && props.color === "blue" ? `${Tokens.color.white}` : null};
+    }
+  }
+
+  .content {
+    h3 {
+      padding-bottom: ${Tokens.rhythm};
+    }
+
+    img {
+      padding: ${Tokens.rhythm} 0;
+    }
+
+    blockquote {
+      border-left: 4px solid ${Tokens.color.gray};
+      margin: ${Tokens.rhythm} 0;
+      padding: 0 ${Tokens.rhythm};
     }
   }
 `;
 
 export const Wrap = styled.div`
-  max-width: ${props =>
+  max-width: ${(props) =>
     props.narrow ? `${Tokens.wrap.narrow}` : `${Tokens.wrap.wide}`};
   margin: auto;
-  padding: ${props => (props.collapse ? `0` : `0 calc(${Tokens.gutter} / 2)`)};
+  padding: ${(props) =>
+    props.collapse ? `0` : `0 calc(${Tokens.gutter} / 2)`};
 
   @media (min-width: ${Tokens.break}) {
     padding: 0 ${Tokens.gutter};
@@ -51,20 +68,20 @@ export const Flex = styled.div`
   @media (min-width: ${Tokens.break}) {
     flex-direction: row;
     justify-content: space-between;
-    align-items: ${props => (props.align ? props.align : `initial`)};
-    flex-wrap: ${props => (props.wrap ? props.wrap : `nowrap`)};
+    align-items: ${(props) => (props.align ? props.align : `initial`)};
+    flex-wrap: ${(props) => (props.wrap ? props.wrap : `nowrap`)};
 
     & > * + * {
       margin-top: 0;
     }
 
     & > *:nth-child(odd) {
-      width: ${props =>
+      width: ${(props) =>
         props.width ? `calc(${props.width[0]}% - ${Tokens.gutter})` : `auto`};
     }
 
     & > *:nth-child(even) {
-      width: ${props =>
+      width: ${(props) =>
         props.width ? `calc(${props.width[1]}% - ${Tokens.gutter})` : `auto`};
     }
   }
@@ -96,7 +113,7 @@ export const Social = styled.div`
 
   @media (max-width: ${Tokens.break}) {
     justify-content: center;
-    padding-bottom: ${props => (props.footer ? `${Tokens.rhythm}` : null)};
+    padding-bottom: ${(props) => (props.footer ? `${Tokens.rhythm}` : null)};
   }
 `;
 

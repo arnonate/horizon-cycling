@@ -92,8 +92,7 @@ export const IndexPageTemplate = ({
               </p>
               <ButtonLink
                 color="gold"
-                href="/"
-                target="_blank"
+                href="/service"
                 rel="noopener noreferrer"
               >
                 View Service
