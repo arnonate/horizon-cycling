@@ -4,7 +4,7 @@ title: 'Horizon Cycling St Joseph, MO'
 image: /img/checkpoint.jpg
 heading: The Best Damn Bike Shop in the Midwest
 description: >-
-  HORIZON CYCLING is St. Joesph’s only retail bicycle shop. Established in 2012,
+  HORIZON CYCLING is St. Joseph’s only retail bicycle shop. Established in 2012,
   Horizon Cycling is a staple in the St. Joseph cycling community.
 
 
