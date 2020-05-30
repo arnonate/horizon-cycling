@@ -196,6 +196,7 @@ export default IndexPage;
 export const pageQuery = graphql`
   query IndexPageTemplate {
     markdownRemark(frontmatter: { templateKey: { eq: "Home" } }) {
+      html
       frontmatter {
         title
         image {
@@ -206,7 +207,6 @@ export const pageQuery = graphql`
           }
         }
         heading
-        description
         intro {
           image {
             childImageSharp {
@@ -231,7 +231,6 @@ export const pageQuery = graphql`
             title
             date
             link
-            description
           }
         }
       }
