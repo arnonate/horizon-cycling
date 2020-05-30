@@ -1,34 +1,37 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { graphql } from "gatsby";
+
 import Layout from "../../components/Layout";
 import Content, { HTMLContent } from "../../components/Content";
+import {
+  Main,
+  Section,
+  Wrap,
+  SEOTitle,
+  BorderedHeading,
+} from "../../common-styles";
 
 export const AboutPageTemplate = ({ title, content, contentComponent }) => {
   const PageContent = contentComponent || Content;
 
   return (
-    <section className="section section--gradient">
-      <div className="container">
-        <div className="columns">
-          <div className="column is-10 is-offset-1">
-            <div className="section">
-              <h2 className="title is-size-3 has-text-weight-bold is-bold-light">
-                {title}
-              </h2>
-              <PageContent className="content" content={content} />
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+    <Main>
+      <SEOTitle>{title}</SEOTitle>
+      <Section color="mute" paddingBottom>
+        <Wrap narrow>
+          <BorderedHeading>{title}</BorderedHeading>
+          <PageContent className="content" content={content} />
+        </Wrap>
+      </Section>
+    </Main>
   );
 };
 
 AboutPageTemplate.propTypes = {
   title: PropTypes.string.isRequired,
   content: PropTypes.string,
-  contentComponent: PropTypes.func
+  contentComponent: PropTypes.func,
 };
 
 const AboutPage = ({ data }) => {
@@ -46,7 +49,7 @@ const AboutPage = ({ data }) => {
 };
 
 AboutPage.propTypes = {
-  data: PropTypes.object.isRequired
+  data: PropTypes.object.isRequired,
 };
 
 export default AboutPage;
