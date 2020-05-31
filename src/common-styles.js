@@ -39,7 +39,7 @@ export const Section = styled.section`
     }
 
     img {
-      padding: ${Tokens.rhythm} 0;
+      margin: ${Tokens.rhythm} 0;
     }
 
     blockquote {
