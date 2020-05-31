@@ -41,8 +41,10 @@ const Footer = class extends React.Component {
             <Copyright>
               <small>
                 &copy; {moment().format("YYYY")} Horizon Cycling. All rights
-                reserved. This is a <a href="https://midcoast.io">Midcoast</a>{" "}
-                website.
+                reserved.
+                <br />
+                Made with ❤️ by{" "}
+                <a href="https://midcoast.io">Midcoast Collective</a>.
               </small>
             </Copyright>
           </Wrap>

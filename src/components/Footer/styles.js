@@ -14,4 +14,5 @@ export const Divider = styled.div`
 
 export const Copyright = styled.p`
   padding-top: ${Tokens.rhythm};
+  text-align: center;
 `;
