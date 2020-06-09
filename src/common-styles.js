@@ -30,7 +30,7 @@ export const Section = styled.section`
 
   .content {
     p + p {
-      /* text-indent: 0; */
+      text-indent: 0;
       padding-top: ${Tokens.rhythm};
     }
 
