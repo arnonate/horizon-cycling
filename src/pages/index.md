@@ -2,7 +2,7 @@
 templateKey: Home
 title: 'Horizon Cycling St Joseph, MO'
 image: /img/checkpoint.jpg
-heading: The Best Darn Bike Shop in the Midwest
+heading: The Best Damn Bike Shop in the Midwest
 intro:
   address: 3607 South Belt Highway
   address_2: 'Saint Joseph, MO 64503'
