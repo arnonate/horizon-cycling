@@ -1,18 +1,16 @@
 ---
 templateKey: Service
-title: Shop Services and Team
+title: Shop Services
 ---
 ### Tune Up Packages
 
-BASIC
+BASIC:
 
 * Safety Inspection
 * Brake Adjustment
 * Shifting Adjustment
 * Lube Drive-train
 * Air Tires
-
-
 
 BASIC PLUS:
 
@@ -21,11 +19,13 @@ BASIC PLUS:
 * Drive-train Clean
 * Wheel True
 
-
-
 PRO:
 
 * Basic Plus
 * Cables/Housing
 * Disassemble/Deep Clean
 * Pack Bearings
+
+
+
+O﻿utside of tune ups, we also specialize in suspension service, tubeless installs, and custom bike builds. Call us for more details!
