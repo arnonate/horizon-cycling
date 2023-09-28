@@ -16,7 +16,7 @@ intro:
       link: 'https://www.facebook.com/events/577084373022424/'
       title: 'Gravel 101 with Brent: Informational/Meet and Greet'
       image: /img/event-gravel.jpg
-  image: /img/Screenshot 2020-02-25 21.31.17.png
+  image: /img/horizon.png
   phone: 816.364.2453
   weekdayHours: Open Monday - Friday 10 - 5
   weekendHours: Open Saturday 9 - 2
