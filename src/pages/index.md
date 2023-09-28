@@ -46,4 +46,4 @@ Established in 2012, Horizon Cycling is a staple in the St. Joseph cycling commu
 
 We sell new bikes from Trek, Revel, and Santa Cruz. In addition to complete bikes, we also have a full lineup of cycling apparel and accessories from Fox, Troy Lee, Bontrager and others. We’re also an authorized dealer for many brands including Shimano, SRAM, Fox Shox, Chris King, Phil Wood, Hope, Industry Nine, Osprey, Smith and more.
 
-Our service is top-tier and we take pride in every bike we turn out. We truly love our local cycling community and are proud to say we're local to Saint Joe. Come check us out for yourself!
+Our service is top-tier and we take pride in every bike we turn out. We truly love our local cycling community and are proud to call Saint Joseph home. Whether its at a local group ride or a trail maintenance work day, we'll see you on the trails!
