@@ -1,6 +1,6 @@
 ---
 templateKey: Home
-title: 'Horizon Cycling St Joseph, MO'
+title: 'Horizon Cycling Saint Joseph, MO'
 image: /img/checkpoint.jpg
 heading: The Best Damn Bike Shop in the Midwest
 intro:
