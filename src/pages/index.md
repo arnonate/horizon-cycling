@@ -4,8 +4,8 @@ title: 'Horizon Cycling Saint Joseph, MO'
 image: /img/checkpoint.jpg
 heading: The Best Damn Bike Shop in the Midwest
 intro:
-  address: 3607 South Belt Highway
-  address_2: 'Saint Joseph, MO 64503'
+  address: 2207 N Belt Hwy
+  address_2: 'Saint Joseph, MO 64506'
   events:
     - date: 2023-09-30T19:00:00.000Z
       description: >-
